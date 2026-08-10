@@ -167,104 +167,104 @@ func cmdDebug(db *store.DB, args []string) {
 				if err != nil {
 					break
 				}
-			switch method {
-			case "Network.requestWillBeSent":
-				var ev struct {
-					RequestID string `json:"requestId"`
-					Request   struct {
-						Method   string         `json:"method"`
-						URL      string         `json:"url"`
-						PostData string         `json:"postData"`
-						Headers  map[string]any `json:"headers"`
-					} `json:"request"`
-				}
-				if err := json.Unmarshal(p, &ev); err != nil {
-					continue
-				}
-				if ev.Request.Method != "POST" ||
-					!(strings.Contains(ev.Request.URL, "message") ||
-						strings.Contains(ev.Request.URL, "im/") ||
-						strings.Contains(ev.Request.URL, "im-") ||
-						strings.Contains(ev.Request.URL, "conversation") ||
-						strings.Contains(ev.Request.URL, "chat") ||
-						strings.Contains(ev.Request.URL, "send")) {
-					continue
-				}
-				seen++
-				fmt.Printf("\n===== 请求 #%d =====\n%s %s\n", seen, ev.Request.Method, ev.Request.URL)
-				for _, h := range []string{"x-bogus", "x-tt-token", "ms-token", "x-vc-b-headers", "x-secsdk-cookie", "x-ss-stub", "cookie"} {
-					if v, ok := ev.Request.Headers[h]; ok {
-						s := fmt.Sprint(v)
-						if len(s) > 400 {
-							s = s[:400] + "..."
-						}
-						fmt.Printf("  HDR %s: %s\n", h, s)
+				switch method {
+				case "Network.requestWillBeSent":
+					var ev struct {
+						RequestID string `json:"requestId"`
+						Request   struct {
+							Method   string         `json:"method"`
+							URL      string         `json:"url"`
+							PostData string         `json:"postData"`
+							Headers  map[string]any `json:"headers"`
+						} `json:"request"`
 					}
-				}
-				body := ev.Request.PostData
-				if len(body) > 3000 {
-					body = body[:3000] + "..."
-				}
-				fmt.Printf("BODY: %s\n", body)
-				interestingReq[ev.RequestID] = ev.Request.URL
-				if seen >= 15 {
-					break loop
-				}
-			case "Network.responseReceived":
-				var ev struct {
-					RequestID string `json:"requestId"`
-					Response  struct {
-						Status   int    `json:"status"`
-						MimeType string `json:"mimeType"`
-					} `json:"response"`
-				}
-				if err := json.Unmarshal(p, &ev); err != nil {
-					continue
-				}
-				if url, ok := interestingReq[ev.RequestID]; ok {
-					fmt.Printf("RESP %s → HTTP %d (%s)\n", url, ev.Response.Status, ev.Response.MimeType)
-				}
-			case "Network.webSocketFrameSent":
-				var ev struct {
-					Response struct {
-						PayloadData string `json:"payloadData"`
-						Opcode      int    `json:"opcode"`
-					} `json:"response"`
-				}
-				_ = json.Unmarshal(p, &ev)
-				if ev.Response.PayloadData != "" {
-					s := ev.Response.PayloadData
-					if ev.Response.Opcode == 2 { // binary 帧 payloadData 是 base64
-						if raw, err := base64.StdEncoding.DecodeString(s); err == nil {
-							s = string(raw)
+					if err := json.Unmarshal(p, &ev); err != nil {
+						continue
+					}
+					if ev.Request.Method != "POST" ||
+						!(strings.Contains(ev.Request.URL, "message") ||
+							strings.Contains(ev.Request.URL, "im/") ||
+							strings.Contains(ev.Request.URL, "im-") ||
+							strings.Contains(ev.Request.URL, "conversation") ||
+							strings.Contains(ev.Request.URL, "chat") ||
+							strings.Contains(ev.Request.URL, "send")) {
+						continue
+					}
+					seen++
+					fmt.Printf("\n===== 请求 #%d =====\n%s %s\n", seen, ev.Request.Method, ev.Request.URL)
+					for _, h := range []string{"x-bogus", "x-tt-token", "ms-token", "x-vc-b-headers", "x-secsdk-cookie", "x-ss-stub", "cookie"} {
+						if v, ok := ev.Request.Headers[h]; ok {
+							s := fmt.Sprint(v)
+							if len(s) > 400 {
+								s = s[:400] + "..."
+							}
+							fmt.Printf("  HDR %s: %s\n", h, s)
 						}
 					}
-					if len(s) > 800 {
-						s = s[:800] + "..."
+					body := ev.Request.PostData
+					if len(body) > 3000 {
+						body = body[:3000] + "..."
 					}
-					fmt.Printf("WS→ %q\n", s)
-				}
-			case "Network.webSocketFrameReceived":
-				var ev struct {
-					Response struct {
-						PayloadData string `json:"payloadData"`
-						Opcode      int    `json:"opcode"`
-					} `json:"response"`
-				}
-				_ = json.Unmarshal(p, &ev)
-				if ev.Response.PayloadData != "" {
-					s := ev.Response.PayloadData
-					if ev.Response.Opcode == 2 {
-						if raw, err := base64.StdEncoding.DecodeString(s); err == nil {
-							s = string(raw)
+					fmt.Printf("BODY: %s\n", body)
+					interestingReq[ev.RequestID] = ev.Request.URL
+					if seen >= 15 {
+						break loop
+					}
+				case "Network.responseReceived":
+					var ev struct {
+						RequestID string `json:"requestId"`
+						Response  struct {
+							Status   int    `json:"status"`
+							MimeType string `json:"mimeType"`
+						} `json:"response"`
+					}
+					if err := json.Unmarshal(p, &ev); err != nil {
+						continue
+					}
+					if url, ok := interestingReq[ev.RequestID]; ok {
+						fmt.Printf("RESP %s → HTTP %d (%s)\n", url, ev.Response.Status, ev.Response.MimeType)
+					}
+				case "Network.webSocketFrameSent":
+					var ev struct {
+						Response struct {
+							PayloadData string `json:"payloadData"`
+							Opcode      int    `json:"opcode"`
+						} `json:"response"`
+					}
+					_ = json.Unmarshal(p, &ev)
+					if ev.Response.PayloadData != "" {
+						s := ev.Response.PayloadData
+						if ev.Response.Opcode == 2 { // binary 帧 payloadData 是 base64
+							if raw, err := base64.StdEncoding.DecodeString(s); err == nil {
+								s = string(raw)
+							}
 						}
+						if len(s) > 800 {
+							s = s[:800] + "..."
+						}
+						fmt.Printf("WS→ %q\n", s)
 					}
-					if len(s) > 800 {
-						s = s[:800] + "..."
+				case "Network.webSocketFrameReceived":
+					var ev struct {
+						Response struct {
+							PayloadData string `json:"payloadData"`
+							Opcode      int    `json:"opcode"`
+						} `json:"response"`
 					}
-					fmt.Printf("WS← %q\n", s)
+					_ = json.Unmarshal(p, &ev)
+					if ev.Response.PayloadData != "" {
+						s := ev.Response.PayloadData
+						if ev.Response.Opcode == 2 {
+							if raw, err := base64.StdEncoding.DecodeString(s); err == nil {
+								s = string(raw)
+							}
+						}
+						if len(s) > 800 {
+							s = s[:800] + "..."
+						}
+						fmt.Printf("WS← %q\n", s)
+					}
 				}
-			}
 			}
 			if seen == 0 {
 				fmt.Println("未捕获到消息相关请求")
@@ -590,7 +590,7 @@ func cmdDebug(db *store.DB, args []string) {
 			} `json:"frames"`
 			Conns []struct {
 				T   int    `json:"t"`
-				URL  string `json:"url"`
+				URL string `json:"url"`
 			} `json:"conns"`
 			Errors []string `json:"errors"`
 		}
@@ -940,7 +940,7 @@ func usage() {
   task create    --senders <id,id> --receivers <uid,uid|@文件> --text "话术"
                  [--link-url <url> --link-title <t> --link-desc <d> --link-cover <url>]
                  [--video <url>] [--image <url>] [--homepage <uid>]
-                 [--interval <秒>] [--max-sent <n>] [--max-fail <n>] [--concurrency <n>]
+                 [--interval <秒>] [--jitter <秒>] [--daily-max <n>] [--max-sent <n>] [--max-fail <n>] [--concurrency <n>]
                  [--proxy <url>...] [--wait]
   task list
   task show      <id>
@@ -1129,7 +1129,9 @@ func cmdTaskCreate(db *store.DB, args []string) {
 	video := fs.String("video", "", "视频卡 URL")
 	image := fs.String("image", "", "图片 URL")
 	homepage := fs.String("homepage", "", "主页卡 UID")
-	interval := fs.Int("interval", 3, "发送间隔(秒)")
+	interval := fs.Int("interval", 30, "发送间隔下限(秒), 默认 30 (风控要求 ≥30s)")
+	jitter := fs.Int("jitter", 10, "间隔随机抖动上限(秒): 实际等待 = interval + [0,jitter]")
+	dailyMax := fs.Int("daily-max", 0, "单账号每日发送上限 (0=不限制)")
 	maxSent := fs.Int("max-sent", 30, "每账号最大发送数")
 	maxFail := fs.Int("max-fail", 5, "连续失败退出阈值")
 	concurrency := fs.Int("concurrency", 4, "并行发送账号数")
@@ -1194,6 +1196,7 @@ func cmdTaskCreate(db *store.DB, args []string) {
 	p.LinkURL, p.LinkTitle, p.LinkDesc, p.LinkCoverURL = *linkURL, *linkTitle, *linkDesc, *linkCover
 	p.VideoURL, p.PictureURL, p.HomePageUID = *video, *image, *homepage
 	p.IntervalSecs, p.MaxSentCount, p.MaxFailCount, p.MaxConcurrency = *interval, *maxSent, *maxFail, *concurrency
+	p.IntervalJitterSecs, p.MaxDailyCount = *jitter, *dailyMax
 	if *proxies != "" {
 		for _, pr := range strings.Split(*proxies, ",") {
 			if pr = strings.TrimSpace(pr); pr != "" {

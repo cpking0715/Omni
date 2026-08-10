@@ -3,6 +3,8 @@ package task
 
 import (
 	"context"
+	"fmt"
+	"math/rand/v2"
 	"strconv"
 	"sync"
 	"time"
@@ -24,21 +26,23 @@ type Progress struct {
 
 // SendParams is the resolved runtime config for one task.
 type SendParams struct {
-	Accounts       []*store.Account
-	Receivers      []int64
-	Proxies        []string
-	Message        string
-	LinkURL        string
-	LinkTitle      string
-	LinkDesc       string
-	LinkCover      string
-	VideoURL       string
-	PictureURL     string
-	HomePageUID    string
-	IntervalSecs   int
-	MaxSentCount   int
-	MaxFailCount   int
-	MaxConcurrency int
+	Accounts           []*store.Account
+	Receivers          []int64
+	Proxies            []string
+	Message            string
+	LinkURL            string
+	LinkTitle          string
+	LinkDesc           string
+	LinkCover          string
+	VideoURL           string
+	PictureURL         string
+	HomePageUID        string
+	IntervalSecs       int
+	IntervalJitterSecs int // 间隔随机抖动上限(秒): 实际等待 = IntervalSecs + [0, jitter]
+	MaxSentCount       int
+	MaxFailCount       int
+	MaxDailyCount      int // 单账号每日发送上限 (0 = 不限制)
+	MaxConcurrency     int
 
 	// Channel selects the IM channel: android|web|browser|auto (DESIGN 5.3).
 	Channel string
@@ -56,13 +60,13 @@ type SendParams struct {
 
 // senderState tracks one sender's counters (mirrors ImTaskState).
 type senderState struct {
-	acct   *store.Account
-	proxy  string
+	acct      *store.Account
+	proxy     string
 	receivers []int64
-	sent   int
-	fail   int
-	consec int
-	quit   bool
+	sent      int
+	fail      int
+	consec    int
+	quit      bool
 }
 
 // runTask executes a task synchronously, reporting progress per message.
@@ -71,8 +75,8 @@ func runTask(ctx context.Context, db *store.DB, t *store.Task, p SendParams, onP
 	states := assignWork(p)
 
 	var (
-		mu      sync.Mutex
-		wg      sync.WaitGroup
+		mu sync.Mutex
+		wg sync.WaitGroup
 	)
 	inc := func(s, f int) {
 		mu.Lock()
@@ -156,6 +160,19 @@ func runSender(ctx context.Context, db *store.DB, t *store.Task, p SendParams, s
 		if st.quit {
 			return
 		}
+		// 风控: 单账号每日发送上限 (按本地自然日)
+		if p.MaxDailyCount > 0 {
+			if sentToday, err := db.CountSentToday(st.acct.UID); err == nil && sentToday >= p.MaxDailyCount {
+				if onProgress != nil {
+					onProgress(Progress{
+						TaskID: t.ID, SenderUID: st.acct.UID, Receiver: receiver,
+						Success: false, Error: fmt.Sprintf("当日发送上限已到 (%d 条)", sentToday),
+						Sent: st.sent, Fail: st.fail,
+					})
+				}
+				return
+			}
+		}
 		msg, connectErr, quit := sendToReceiver(ctx, st, receiver, p)
 		if msg != nil {
 			msg.TaskID = t.ID
@@ -196,8 +213,13 @@ func runSender(ctx context.Context, db *store.DB, t *store.Task, p SendParams, s
 			return
 		}
 		if i < len(st.receivers)-1 && p.IntervalSecs > 0 {
+			// 风控: 间隔下限 + 随机抖动, 避免固定节奏被风控识别
+			wait := time.Duration(p.IntervalSecs) * time.Second
+			if p.IntervalJitterSecs > 0 {
+				wait += time.Duration(rand.IntN(p.IntervalJitterSecs+1)) * time.Second
+			}
 			select {
-			case <-time.After(time.Duration(p.IntervalSecs) * time.Second):
+			case <-time.After(wait):
 			case <-ctx.Done():
 				return
 			}

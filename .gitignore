@@ -14,6 +14,7 @@ ck.txt
 # 抓包快照中的敏感凭证 (cookie/session/签名)
 **/account.json
 **/m6_account.json
+**/account_*.json
 **/sign_snapshot.json
 **/send_body.b64
 

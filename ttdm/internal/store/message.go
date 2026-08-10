@@ -102,6 +102,18 @@ const messageCols = `id, task_id, sender_uid, receiver_uid, protocol_type,
 	video_status, video_error, image_status, image_error,
 	homepage_status, homepage_error, sent_at, created_at`
 
+// CountSentToday returns how many messages a sender has sent since local
+// midnight (风控: 每日发送上限判定)。
+func (db *DB) CountSentToday(senderUID int64) (int, error) {
+	start := time.Now()
+	midnight := time.Date(start.Year(), start.Month(), start.Day(), 0, 0, 0, 0, start.Location())
+	var n int
+	err := db.QueryRow(`SELECT COUNT(*) FROM messages
+		WHERE sender_uid = ? AND sent_at >= ?`,
+		senderUID, midnight.UnixMilli()).Scan(&n)
+	return n, err
+}
+
 // ListMessagesByTask returns all messages of a task.
 func (db *DB) ListMessagesByTask(taskID int64) ([]*Message, error) {
 	rows, err := db.Query(`SELECT `+messageCols+` FROM messages WHERE task_id = ? ORDER BY id`, taskID)

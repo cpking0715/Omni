@@ -36,13 +36,20 @@ go test ./...
 
 ## 通道状态一览
 
-| 通道 | 状态 |
-|---|---|
-| 通道二 Web HTTP 发送（im-api message/send） | ✅ 可用，无签名直连（M6 已打通） |
-| 通道二 Web WSS（im-ws.tiktok.com） | 🔶 连接已打通，发送走 HTTP |
-| 模拟通道（AdsPower 浏览器 + CDP） | ✅ 可用（当前主力） |
-| 通道一 Android WSS 协议 | ⚠️ 骨架保留，服务端已拒绝 |
-| 通道三/四（厂商中转） | ❌ 已弃用 |
+> 2026-08-10 端到端实测（AdsPower `k1flkhdn`）：三条自会话消息全部闭环可达，详见 [docs/CHANNELS.md](docs/CHANNELS.md)。
+
+| 通道 | 状态 | 说明 |
+|---|---|---|
+| 通道二 Web HTTP 发送（im-api message/send） | ✅ 可用 | 无签名直连实测通过（561ms，消息可达） |
+| 模拟通道（AdsPower 浏览器 + CDP） | ✅ 可用 | 任务实测通过（输入→发送→消息可达），当前主力 |
+| auto（Web 优先，失败降级浏览器） | ✅ 可用 | 实测通过（推荐默认） |
+| 通道二 Web WSS（im-ws.tiktok.com） | ⚠️ 部分可用 | pbbp2 握手/typing 通过；发送仍走 HTTP，暂不单独开放 |
+| 通道一 Android WSS 协议 | ❌ 不可用 | 服务端 HTTP 400 拒绝，仅保留骨架 |
+| 通道三/四（厂商中转） | ❌ 已弃用 | 单点依赖，不实现 |
+
+## 前端接入
+
+前端「发送设置」通道下拉框数据源、表单配置项 Schema 与风控参数见 [docs/CHANNELS.md](docs/CHANNELS.md)（`web` / `browser` / `auto` 可选，`wss` / `android` 置灰）。
 
 ## 技术栈
 

@@ -35,10 +35,10 @@ go test ./...
 
 | 通道 | 状态 | 说明 |
 |---|---|---|
-| 通道一 Android WSS 协议 | ⚠️ 骨架保留，不可用 | 原反编译客户端 HTTP 400，仅作协议结构参考，不投入修复 |
-| 通道二 Web 发送 (HTTP 协议) | ✅ 可用 (M6 已打通) | `POST im-api.tiktok.com/v1/message/send` + webmssdk 签名快照复用；204=服务端静默响应（浏览器抓包同样出现，幂等/限流去重，视为成功），200+protobuf 业务响应（如 7193 消息请求限制） |
-| 通道二 Web WSS 协议 | 🔶 连接已打通，发送未走 WSS | `wss://im-ws.tiktok.com/ws/v2`（fws_1.0.0 / pbbp2）连接/信封/typing 已实测；消息发送改用同 aid=1988 的 HTTP send_text（M6-3 抓包决定） |
-| 模拟通道（AdsPower 浏览器） | ✅ 可用（当前主力） | CDP 自动化操作 tiktok.com/messages，选择器集中管理于 `internal/protocol/selectors.go` |
+| 通道一 Android WSS 协议 | ❌ 不可用 | 原反编译客户端 HTTP 400，仅作协议结构参考，不投入修复 |
+| 通道二 Web 发送 (HTTP 协议) | ✅ 可用 (k1flkhdn 实测) | `POST im-api.tiktok.com/v1/message/send` + webmssdk 签名快照复用；**无签名直连可用**（M6-4/k1flkhdn 实测）；204=服务端静默响应（幂等/限流去重，视为成功），200+protobuf 业务响应（如 7193 消息请求限制） |
+| 通道二 Web WSS 协议 | ⚠️ 部分可用 | `wss://im-ws.tiktok.com/ws/v2`（fws_1.0.0 / pbbp2）连接/信封/typing 已实测（k1flkhdn 实测握手通过）；消息发送改用同 aid=1988 的 HTTP send_text，不单独开放 |
+| 模拟通道（AdsPower 浏览器） | ✅ 可用（当前主力，k1flkhdn 实测） | CDP 自动化操作 tiktok.com/messages，选择器集中管理于 `internal/protocol/selectors.go` |
 | 通道三/四（厂商中转） | ❌ 已弃用 | 单点依赖 + 硬编码代理凭证，不实现 |
 | `auto`（默认） | ✅ | 有 ttwid 时优先 Web 通道，连接失败或发送不可用自动降级浏览器 |
 
@@ -79,9 +79,12 @@ ttdm template delete 3
 ### 4. 创建私信任务
 
 ```bash
-# 固定文本
+# 固定文本 (风控默认: 间隔≥30s + 随机抖动 10s, 可用 --interval/--jitter 调整)
 ttdm task create --senders 1,2 --receivers @targets.txt --text "Hi" \
-  --interval 3 --max-sent 30 --max-fail 5 --concurrency 4
+  --interval 30 --jitter 10 --max-sent 30 --max-fail 5 --concurrency 4
+
+# 单账号每日发送上限 (按本地自然日统计, 0=不限制)
+ttdm task create --senders 1 --receivers @targets.txt --text hi --daily-max 50
 
 # 话术库随机话术 + 随机表情 + 当前时间 + 链接随机池
 ttdm task create --senders 1 --receivers @targets.txt \

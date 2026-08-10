@@ -3,14 +3,27 @@
 > TikTok 私信触达工具 (Go 重构版) — 截至 2026-08-10 完成状态
 > 协议逆向依据: docs/TIKTOK-DM-FLOW.md | 设计: docs/tiktok/TIKTOK-DESIGN.md
 
+## 〇、端到端实测 (2026-08-10, AdsPower k1flkhdn)
+
+浏览器配置: **k1flkhdn** (tiktok-2, 非 k1fan6kh) · uid=7664958044560016398 · device_id=7672...1997 · store_idc=useast5
+
+| 通道 | 实测结果 | 闭环证据 |
+|---|---|---|
+| 通道二 Web HTTP (无签名直连) | ✅ 发送成功 561ms, 无业务拒绝 | 浏览器会话可见 `e2e-web-http-test-01` |
+| 模拟通道 BrowserClient (CDP) | ✅ 任务成功 1/1 | 页面可见 `e2e-browser-test-02` |
+| auto (Web 优先) | ✅ 任务成功 1/1 | 页面可见 `e2e-auto-test-03` |
+| 通道二 Web WSS (im-ws) | ✅ pbbp2 握手通过, 保持 5s | access_key 有效, typing 帧发送 |
+
+测试全程间隔 ≥30s (interval=30 + jitter 随机), 共 3 条自会话消息, 未触发限频。
+
 ## 一、通道能力
 
 | 通道 | 状态 | 说明 |
 |---|---|---|
-| 通道二: Web HTTP (im-api message/send) | ✅ 已跑通 | `POST im-api.tiktok.com/v1/message/send`, **无签名直连可用** (M6-4 实测签名非必需) |
+| 通道二: Web HTTP (im-api message/send) | ✅ 已跑通 | `POST im-api.tiktok.com/v1/message/send`, **无签名直连可用** (M6-4 + 2026-08-10 k1flkhdn 实测) |
 | 通道二: Web WSS (im-ws.tiktok.com) | ✅ 已接通 | fws_1.0.0 / pbbp2, 连接/帧编解码/typing 已实测; 消息发送复用 HTTP send_text |
-| 模拟通道: BrowserClient (AdsPower + CDP) | ✅ 代码完整 | 真实鼠标/键盘事件, Draft.js 输入, 发送结果探测 |
-| 通道一: Android WSS 协议 | ⚠️ 骨架 | 协议结构已还原, 待真机验证修复 |
+| 模拟通道: BrowserClient (AdsPower + CDP) | ✅ 已跑通 | 2026-08-10 k1flkhdn 实测: 输入+发送+消息可达; 真实鼠标/键盘事件 |
+| 通道一: Android WSS 协议 | ⚠️ 骨架 | 协议结构已还原, 服务端已拒绝 (HTTP 400), 不投入修复 |
 
 ## 二、已实现功能
 
