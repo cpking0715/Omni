@@ -137,6 +137,32 @@ ttdm task create --senders 1 --receivers @targets.txt --text hi --channel browse
 - 浏览器需保持运行（ttdm 只连接不启动）；连接/流程与 AdsPower 模式完全一致（选择器统一在 `internal/protocol/selectors.go`）
 - 无指纹隔离/代理隔离，建议用于测试与小规模发送；正式批量仍建议 AdsPower（`adspower sync` 绑定）
 
+### 7. Web 控制台（一键启动 + 浏览器环境切换）
+
+内置 Web 控制台（`ttdm server`），页面提供**浏览器环境切换按钮**（指纹浏览器 Ads 为默认 / 本地浏览器），随时切换，保存后新任务自动生效：
+
+```powershell
+# 一键启动（构建 + 启动服务 + 自动打开浏览器）
+.\start.ps1                    # 默认端口 8787
+.\start.ps1 -Port 9000 -NoBuild  # 自定义端口 / 跳过构建
+```
+
+或手动启动：
+
+```bash
+ttdm server --addr 127.0.0.1:8787   # 浏览器访问 http://127.0.0.1:8787
+```
+
+控制台功能：
+
+- **浏览器环境切换**：指纹浏览器（Ads，需 API Key，走账号绑定的 AdsPower 配置）/ 本地浏览器（填 CDP 调试端口，`local:<端口>` 运行时覆盖，无需 Key）；默认 Ads，设置存 SQLite（`settings` 表）
+- **创建任务**：选择账号/接收者/话术/通道（auto/web/browser）与风控参数（interval/jitter/daily-max/max-fail），服务端复用任务引擎执行
+- **任务监控**：列表 3s 自动刷新，状态/成功/失败/错误实时可见，可停止运行中任务
+
+API（供其他前端对接）：`GET/POST /api/settings`（browser_mode: ads|local）、`GET /api/accounts`、`POST/GET /api/tasks`、`GET /api/tasks/{id}`、`POST /api/tasks/{id}/stop`。
+
+> 说明：`browser_mode=local` 时创建的 browser/auto 任务运行时以 `local:<端口>` 覆盖账号绑定的浏览器环境，**不修改账号数据**（任务级覆盖，`AdsProfileOverride`）。
+
 ## 错误码与退出策略
 
 - `7174 / 7178 / 7192`：陌生 3 条上限已到，**视为成功**（消息已送达）

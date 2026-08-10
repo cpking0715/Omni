@@ -61,6 +61,10 @@ type Params struct {
 	// 通道选择: "" | "android" | "web" | "browser" | "auto"
 	// auto = 优先 Web 通道, 失败/未逆向完成时降级模拟通道 (DESIGN 5.3)
 	Channel string `json:"channel,omitempty"`
+
+	// AdsProfileOverride 任务级浏览器环境覆盖 (Web 控制台切换用):
+	// 非空时运行时以该值替换账号绑定的 ads_profile_id (如 local:9222), 不改库。
+	AdsProfileOverride string `json:"ads_profile_override,omitempty"`
 }
 
 // DefaultParams returns parameters with the original client's defaults.

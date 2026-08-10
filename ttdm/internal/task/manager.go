@@ -182,6 +182,10 @@ func (m *Manager) execute(ctx context.Context, t *store.Task, p store.Params) {
 			loadErr = fmt.Errorf("账号 %d 不存在", id)
 			break
 		}
+		// 任务级浏览器环境覆盖 (Web 控制台本地/指纹切换): 仅运行时生效, 不改库
+		if p.AdsProfileOverride != "" {
+			a.AdsProfileID = p.AdsProfileOverride
+		}
 		if err := validateAccountForChannel(a, p.Channel); err != nil {
 			loadErr = err
 			break

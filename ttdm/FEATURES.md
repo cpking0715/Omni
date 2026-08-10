@@ -65,6 +65,7 @@
 - [x] task: 发送任务 (含 7193/7195 业务码回显)
 - [x] message: 消息记录查询
 - [x] adspower: 浏览器管理
+- [x] server: 内置 Web 控制台 (一键启动 start.ps1, 浏览器环境切换 ads/local, 任务创建与监控)
 
 ### 辅助工具 (cmd/)
 - [x] websend: 单条消息验证 CLI (`-snap <json|->` 支持无签名直连)

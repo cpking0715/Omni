@@ -85,6 +85,8 @@ func main() {
 		cmdMessage(db, args[1:])
 	case "adspower":
 		cmdAdsPower(db, args[1:])
+	case "server":
+		cmdServer(db, args[1:])
 	case "debug":
 		cmdDebug(db, args[1:])
 	case "help", "-h", "--help":
