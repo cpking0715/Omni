@@ -35,7 +35,7 @@
 | 通道 | 必填配置 | 说明 |
 |---|---|---|
 | `web` | 账号 cookie（含 ttwid/sessionid） | 签名快照可选（`sign_snapshot.json`）；代理可选 |
-| `browser` | AdsPower API Key + 浏览器配置 ID（账号绑定 `ads_profile_id`） | 账号-浏览器环境 1:1；代理由浏览器环境自带 |
+| `browser` | AdsPower API Key + 浏览器配置 ID，或本地直连 `ads_profile_id=local:<端口>`（免 Key，见 ttdm/README.md §6） | 账号-浏览器环境 1:1；代理由浏览器环境自带 |
 | `auto` | 账号 cookie + AdsPower API Key | Web 失败自动降级 browser |
 | `wss` | 账号 cookie（ttwid 提取 access_key） | 仅连接层开放，发送仍走 HTTP |
 | `android` | — | 不开放 |
@@ -46,7 +46,7 @@
 {
   "channel": { "type": "select", "source": "见上方下拉框数据源", "default": "auto" },
   "ads_api_key": { "type": "password", "requiredWhen": ["browser", "auto"], "hint": "AdsPower 本地 API Key" },
-  "ads_profile_id": { "type": "text", "requiredWhen": ["browser", "auto"], "hint": "AdsPower 浏览器配置 ID，如 k1flkhdn（注意与 k1fan6kh 区分）" },
+  "ads_profile_id": { "type": "text", "requiredWhen": ["browser", "auto"], "hint": "AdsPower 浏览器配置 ID（如 k1flkhdn），或本地浏览器直连 local:<端口>（非指纹场景）" },
   "interval_secs": { "type": "number", "min": 30, "default": 30, "hint": "发送间隔下限，风控要求 ≥30s" },
   "jitter_secs": { "type": "number", "min": 0, "max": 60, "default": 10, "hint": "间隔随机抖动上限，实际等待 = interval + [0,jitter]" },
   "daily_max": { "type": "number", "min": 0, "default": 0, "hint": "单账号每日发送上限，0=不限制；建议 ≤50" },

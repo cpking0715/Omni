@@ -41,7 +41,7 @@ go test ./...
 | 通道 | 状态 | 说明 |
 |---|---|---|
 | 通道二 Web HTTP 发送（im-api message/send） | ✅ 可用 | 无签名直连实测通过（561ms，消息可达） |
-| 模拟通道（AdsPower 浏览器 + CDP） | ✅ 可用 | 任务实测通过（输入→发送→消息可达），当前主力 |
+| 模拟通道（AdsPower / 本地浏览器 + CDP） | ✅ 可用 | 任务实测通过（输入→发送→消息可达），当前主力；非指纹环境可用 `ads_profile_id=local:<端口>` 直连本地 Chrome/Edge，无需 API Key（步骤见 [ttdm/README.md §6](ttdm/README.md)） |
 | auto（Web 优先，失败降级浏览器） | ✅ 可用 | 实测通过（推荐默认） |
 | 通道二 Web WSS（im-ws.tiktok.com） | ⚠️ 部分可用 | pbbp2 握手/typing 通过；发送仍走 HTTP，暂不单独开放 |
 | 通道一 Android WSS 协议 | ❌ 不可用 | 服务端 HTTP 400 拒绝，仅保留骨架 |

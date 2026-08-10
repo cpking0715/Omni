@@ -35,14 +35,32 @@ type BrowserClient struct {
 // Compile-time check: BrowserClient implements IImClient.
 var _ IImClient = (*BrowserClient)(nil)
 
-// NewBrowserClient binds an account to its AdsPower profile browser.
-// adsAPIKey is the AdsPower Local API key.
+// LocalBrowserPrefix marks AdsProfileID values that connect to a plain
+// local browser via its CDP debug port (e.g. local:9222) instead of an
+// AdsPower profile. AdsPower user ids are 8-char alphanumeric, so the
+// prefix never collides.
+const LocalBrowserPrefix = "local:"
+
+// localDebugPort reports whether profile is a local-browser direct
+// connection (local:<cdp debug port>) and returns the port.
+func localDebugPort(profile string) (string, bool) {
+	if !strings.HasPrefix(profile, LocalBrowserPrefix) {
+		return "", false
+	}
+	port := strings.TrimPrefix(profile, LocalBrowserPrefix)
+	return port, port != ""
+}
+
+// NewBrowserClient binds an account to its browser environment. The
+// profile is normally an AdsPower profile id (adsAPIKey required); with
+// the local:<port> prefix it connects straight to a local browser's CDP
+// debug port and adsAPIKey is ignored.
 func NewBrowserClient(a *store.Account, adsAPIKey string) (*BrowserClient, error) {
 	if a.AdsProfileID == "" {
-		return nil, fmt.Errorf("账号未绑定 AdsPower 浏览器配置 (ads_profile_id 为空)")
+		return nil, fmt.Errorf("账号未绑定浏览器环境 (ads_profile_id 为空; 本地浏览器填 local:<debug端口>)")
 	}
-	if adsAPIKey == "" {
-		return nil, fmt.Errorf("缺少 AdsPower 本地 API Key")
+	if _, ok := localDebugPort(a.AdsProfileID); !ok && adsAPIKey == "" {
+		return nil, fmt.Errorf("缺少 AdsPower 本地 API Key (本地直连模式请用 ads_profile_id=local:<debug端口>)")
 	}
 	return &BrowserClient{
 		account:         a,
@@ -53,17 +71,25 @@ func NewBrowserClient(a *store.Account, adsAPIKey string) (*BrowserClient, error
 	}, nil
 }
 
-// Connect starts (or attaches to) the AdsPower profile browser and opens
-// the TikTok messages page. proxyURL is ignored — the browser profile
-// carries its own proxy environment (账号-环境 1:1).
+// Connect starts (or attaches to) the profile browser and opens the TikTok
+// messages page. AdsPower profiles are launched via the Local API; local
+// browsers (local:<port>) are attached through their CDP debug port
+// directly. proxyURL is ignored — the browser environment carries its own
+// proxy (账号-环境 1:1).
 func (c *BrowserClient) Connect(ctx context.Context, proxyURL string) error {
 	if c.page != nil {
 		return nil
 	}
-	c.ads = adspower.NewClient(c.adsKey)
-	_, debugPort, err := c.ads.StartBrowser(ctx, c.account.AdsProfileID)
-	if err != nil {
-		return fmt.Errorf("启动浏览器失败: %w", err)
+	var debugPort string
+	if port, ok := localDebugPort(c.account.AdsProfileID); ok {
+		debugPort = port
+	} else {
+		c.ads = adspower.NewClient(c.adsKey)
+		_, dp, err := c.ads.StartBrowser(ctx, c.account.AdsProfileID)
+		if err != nil {
+			return fmt.Errorf("启动浏览器失败: %w", err)
+		}
+		debugPort = dp
 	}
 	pageWS, err := adspower.PageWSURL(ctx, debugPort)
 	if err != nil {

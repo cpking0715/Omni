@@ -72,4 +72,26 @@ func TestNewBrowserClientValidation(t *testing.T) {
 	if _, err := NewBrowserClient(a2, "secret"); err != nil {
 		t.Errorf("unexpected error: %v", err)
 	}
+	// local:<port> direct mode → ok without api key
+	a3 := &store.Account{UID: 1, AdsProfileID: LocalBrowserPrefix + "9222"}
+	if _, err := NewBrowserClient(a3, ""); err != nil {
+		t.Errorf("unexpected error for local direct mode: %v", err)
+	}
+	// local: without port → error
+	a4 := &store.Account{UID: 1, AdsProfileID: LocalBrowserPrefix}
+	if _, err := NewBrowserClient(a4, ""); err == nil {
+		t.Error("expected error for empty local port")
+	}
+}
+
+func TestLocalDebugPort(t *testing.T) {
+	if port, ok := localDebugPort("local:9222"); !ok || port != "9222" {
+		t.Errorf("local:9222 → got %q,%v", port, ok)
+	}
+	if _, ok := localDebugPort("k1flkhdn"); ok {
+		t.Error("ads profile id must not be treated as local")
+	}
+	if _, ok := localDebugPort("local:"); ok {
+		t.Error("empty port must not be accepted")
+	}
 }

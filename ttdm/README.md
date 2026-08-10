@@ -114,6 +114,29 @@ ttdm adspower list --key <API Key>     # 列出本机浏览器配置
 ttdm adspower sync --key <API Key>     # 按名称匹配写入账号的 ads_profile_id
 ```
 
+### 6. 本地浏览器直连（非指纹浏览器）
+
+不依赖 AdsPower 时，可直接驱动本机 Chrome/Edge（经 CDP 调试端口）。账号绑定 `ads_profile_id` 填 `local:<端口>` 即可，**无需 `--ads-key`**（AdsPower 配置 ID 是 8 位字母数字，与 `local:` 前缀不会冲突）。
+
+```bash
+# 1) 用独立用户目录启动本地浏览器（勿用日常浏览的默认目录）
+#    Chrome:  chrome --remote-debugging-port=9222 --user-data-dir="D:\\ttdm-browser"
+#    Edge:    msedge --remote-debugging-port=9222 --user-data-dir="D:\\ttdm-browser"
+
+# 2) 在浏览器中登录 TikTok 并保持浏览器运行
+# 3) 导入账号时绑定 local:<端口>
+ttdm account import --file ck.txt --ads-profile local:9222
+
+# 4) 创建任务（browser / auto 通道均可，不需要 --ads-key）
+ttdm task create --senders 1 --receivers @targets.txt --text hi --channel browser
+```
+
+注意事项：
+
+- 一个本地浏览器实例同一时刻只跑一个发送账号；多账号请用多个端口 + 多个 `--user-data-dir`（如 `local:9222` / `local:9223`）
+- 浏览器需保持运行（ttdm 只连接不启动）；连接/流程与 AdsPower 模式完全一致（选择器统一在 `internal/protocol/selectors.go`）
+- 无指纹隔离/代理隔离，建议用于测试与小规模发送；正式批量仍建议 AdsPower（`adspower sync` 绑定）
+
 ## 错误码与退出策略
 
 - `7174 / 7178 / 7192`：陌生 3 条上限已到，**视为成功**（消息已送达）

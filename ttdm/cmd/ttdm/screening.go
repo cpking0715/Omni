@@ -26,7 +26,7 @@ func cmdAccountImport(db *store.DB, args []string) {
 	file := fs.String("file", "", "导入文件路径 (文本或 JSON)")
 	deviceID := fs.String("device-id", "", "统一设备 ID (JSON 扩展字段/ttwid 优先)")
 	proxy := fs.String("proxy", "", "统一代理 URL")
-	adsProfile := fs.String("ads-profile", "", "AdsPower 浏览器配置 ID (模拟通道需要; 仅单账号导入时生效)")
+	adsProfile := fs.String("ads-profile", "", "浏览器环境: AdsPower 配置 ID 或 local:<端口> 本地直连 (模拟通道需要; 仅单账号导入时生效)")
 	fs.Parse(args)
 	if *file == "" {
 		fmt.Fprintln(os.Stderr, "需要 --file")
