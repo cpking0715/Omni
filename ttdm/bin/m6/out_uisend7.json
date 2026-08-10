@@ -1,0 +1,22 @@
+{
+  "log": [
+    "hook: hooked",
+    "open: already: royyen",
+    "coord: {\"x\":565,\"y\":475}",
+    "inserted: rs-v7-1786291805459",
+    "btn: {\"x\":754,\"y\":475}",
+    "clicked send btn"
+  ],
+  "send_responses": {
+    "fetch": [],
+    "xhr": [],
+    "net": []
+  },
+  "chat_tail": [
+    "Your content is amazing! Check out our page too 🙌"
+  ],
+  "msg": "rs-v7-1786291805459",
+  "btn_still": true,
+  "input_after": "rs-v6-1786291722499rs-v7-1786291805459",
+  "err_texts": []
+}

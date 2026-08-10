@@ -1,0 +1,7 @@
+{
+  "log": [
+    "trace: {\"type\":\"object\",\"keys\":[\"dump\",\"size\",\"clear\",\"toText\",\"toMarkdown\",\"triggerDebugReport\"],\"json\":\"{}\",\"convTexts\":[]}",
+    "fiber: []",
+    "ws: {\"wsCount\":0,\"wsUrls\":[\"https://lf16-cdn-tos.tiktokcdn-us.com/obj/static-tx/slardar/fe/sdk-web/browser.oci.js?bid=tiktok_webapp&globalName=SlardarClient\",\"https://mon16-normal-useast5.tiktokv.us/monitor_web/settings/browser-settings?bid=tiktok_webapp&store=1\",\"https://mon16-normal-useast5.tiktokv.us/monitor_web/settings/browser-settings?bid=pns_communication_service&store=1\",\"https://mon16-normal-useast5.tiktokv.us/monitor_web/settings/browser-settings?bid=cdn_replace_service_worker&store=1\",\"https://mon16-normal-useast5.tiktokv.us/monitor_web/settings/browser-settings?bid=webmssdk&store=1\"]}"
+  ]
+}

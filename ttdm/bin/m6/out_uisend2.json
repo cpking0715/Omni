@@ -1,0 +1,13 @@
+{
+  "msg": "rs-e2e2-1786291210490",
+  "chat_tail": [
+    "Hey! I came across your content and really liked it 😊"
+  ],
+  "log": [
+    "typed: rs-e2e2-1786291210490",
+    "check: {\"inputText\":\"rs-btn-diag-1786291145642\",\"placeholderVisible\":false,\"bottomEls\":[{\"tag\":\"DIV\",\"e2e\":\"dm-new-emoji-btn\",\"aria\":\"Click to add emojis\",\"cls\":\"css-17ymwuq-7937d88b--DivEmojiButton e1xqqiqx5\",\"x\":733,\"y\":463,\"w\":24,\"h\":24},{\"tag\":\"svg\",\"e2e\":\"\",\"aria\":\"\",\"cls\":\"[object SVGAnimatedString]\",\"x\":733,\"y\":463,\"w\":24,\"h\":24}]}",
+    "cands: [{\"e2e\":\"\",\"aria\":\"Upload\",\"cls\":\"TUXButton TUXButton--default TUXButton--medium TUXButton--secondary css-8t900f-7\",\"x\":16,\"y\":468,\"w\":40,\"h\":40},{\"e2e\":\"\",\"aria\":\"Profile\",\"cls\":\"TUXButton TUXButton--default TUXButton--medium TUXButton--secondary css-8t900f-7\",\"x\":16,\"y\":512,\"w\":40,\"h\":40},{\"e2e\":\"nav-more-menu\",\"aria\":\"More\",\"cls\":\"TUXButton TUXButton--default TUXButton--medium TUXButton--secondary css-8t900f-7\",\"x\":16,\"y\":556,\"w\":40,\"h\":40},{\"e2e\":\"dm-new-emoji-btn\",\"aria\":\"Click to add emojis\",\"cls\":\"css-17ymwuq-7937d88b--DivEmojiButton e1xqqiqx5\",\"x\":733,\"y\":463,\"w\":24,\"h\":24}]",
+    "clicked: dm-new-emoji-btn aria=Click to add emojis at 733,463"
+  ],
+  "send_responses": []
+}

@@ -1,0 +1,18 @@
+{
+  "resource_timing_final": [
+    {
+      "url": "https://im-api.tiktok.com/v2/message/get_by_user_init",
+      "dur": 332
+    },
+    {
+      "url": "https://im-api.tiktok.com/v2/message/get_by_user_init",
+      "dur": 299
+    }
+  ],
+  "hook_business_layer": [],
+  "log": [
+    "step0 reload sent",
+    "step1 hook: hooked",
+    "step2 click: clicked 4 items, first: royyen Your content is amazing"
+  ]
+}

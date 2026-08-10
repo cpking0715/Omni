@@ -1,0 +1,8 @@
+(...args) => {
+    let url = '';
+    try { url = typeof args[0] === 'string' ? args[0] : (args[0] && args[0].url) || String(args[0]); } catch (e) {}
+    if (/X-Dynosaur|X-Gnarly/.test(url)) {
+      window.__rsHooked.push({ url: url.slice(0, 3000), stack: new Error().stack.split('\n').slice(1, 8).join(' | ') });
+    }
+    return origFetch(...args);
+  }

@@ -1,0 +1,7 @@
+{
+  "log": [
+    "hook: hooked",
+    "dom: {\"count\":4,\"nicks\":[\"royyen\",\"user17824815072124\",\"Taylor Swift\",\"Colorado Ped Patrol\"],\"chatAttrs\":[{\"tabindex\":\"0\",\"data-e2e\":\"dm-new-chat-item\",\"class\":\"css-xkm3z4-7937d88b--DivChatItemWrapper e6qyyay0\"}],\"globals\":[\"onloadedmetadata\",\"ontimeupdate\",\"onwebkitanimationend\",\"onwebkitanimationiteration\",\"onwebkitanimationstart\",\"onanimationcancel\",\"onanimationend\",\"onanimationiteration\",\"onanimationstart\",\"cancelAnimationFrame\",\"clearTimeout\",\"createImageBitmap\",\"requestAnimationFrame\",\"setTimeout\",\"webkitCancelAnimationFrame\",\"webkitRequestAnimationFrame\",\"__PNS_RUNTIME__\",\"TTAP_APPPARSE_STARTTIME\",\"__VOM_GLOBAL_TIMING_STORE_KEY\",\"_bound_error_time\",\"regeneratorRuntime\",\"ttWebappFocusTime\",\"setImmediate\",\"clearImmediate\",\"__bytedImCallTrace\",\"__convUrls\"]}",
+    "net: []"
+  ]
+}

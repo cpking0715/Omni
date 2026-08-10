@@ -1,0 +1,14 @@
+{
+  "msg": "rs-click-1786291574473",
+  "log": [
+    "coord: {\"x\":589,\"y\":475,\"w\":337,\"h\":18}",
+    "clicked input",
+    "inserted: rs-click-1786291574473",
+    "check: {\"inputText\":\"\",\"phVisible\":false,\"sendEls\":[]}",
+    "send-method: {\"method\":\"enter\"}",
+    "enter-sent"
+  ],
+  "send_responses": [],
+  "input_after": "",
+  "chat_tail": []
+}

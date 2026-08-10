@@ -1,0 +1,8 @@
+{
+  "log": [
+    "hook: hooked",
+    "typed: {\"comboCount\":0}",
+    "combo: []",
+    "userfull: {\"status\":200,\"len\":22683,\"users\":[{\"uid\":\"7375789420798444590\",\"unique\":\"user13108221976358\",\"nick\":\"royyen\",\"secUid\":\"MS4wLjABAAAAfpW0kPlDi7Fs1sEE0D\"},{\"uid\":\"6769042968499995650\",\"unique\":\"royyen\",\"nick\":\"royyen\",\"secUid\":\"MS4wLjABAAAAwnpXnH1-GDWXtg1BNk\"},{\"uid\":\"7479823623491208199\",\"unique\":\"royyen_3\",\"nick\":\"royyen\",\"secUid\":\"MS4wLjABAAAA5dZUDBRIjeMQefidPx\"},{\"uid\":\"7562931693046236171\",\"unique\":\"royyen397\",\"nick\":\"royyen\",\"secUid\":\"MS4wLjABAAAAP0kmFQPc2Ge021V8mC\"},{\"uid\":\"7295024403224560646\",\"unique\":\"royyen_\",\"nick\":\"royyennn\",\"secUid\":\"MS4wLjABAAAAklYFJnT5VmBXqXzzvT\"}],\"head\":\"{\\\"type\\\":1,\\\"user_list\\\":[{\\\"user_info\\\":{\\\"uid\\\":\\\"7375789420798444590\\\",\\\"nickname\\\":\\\"royyen\\\",\\\"signature\\\":\\\"\\\",\\\"avatar_thumb\\\":{\\\"uri\\\":\\\"tos-useast5-avt-0068-tx/7376689015400955946\\\",\\\"url_list\\\":[\\\"https://p16-common-sign.tiktokcdn-us.com/tos-useast5-avt-0068-tx/7376689015400955946~tplv-tiktokx-cropcenter:100:100.webp?biz_tag=tiktok_user.user_cover\\\\u0026dr=9640\\\\u0026idc=useast5\\\\u0026ps=13740610\\\\u0026refresh_token=9585e9b4\\\\u0026shcp=c1333099\\\\u0026shp=30310797\\\\u0026t=4d5b0474\\\\u0026x-expires=1786374000\\\\u0026x-signature=5fd3vmWADeP%2FaMhdLZBxh37%2FQ%2FE%3D\\\",\\\"https://p19-common-sign.tiktokcdn-us.com/tos-useast5-avt\"}"
+  ]
+}

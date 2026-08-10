@@ -1,0 +1,17 @@
+{
+  "im_api_timings": [
+    {
+      "url": "https://im-api.tiktok.com/v2/message/get_by_user_init",
+      "dur": 332,
+      "size": 0
+    },
+    {
+      "url": "https://im-api.tiktok.com/v2/message/get_by_user_init",
+      "dur": 299,
+      "size": 0
+    }
+  ],
+  "log": [
+    "send: {\"steps\":[\"input set\",\"send btns: 0\",\"no visible send btn; try last\"]}"
+  ]
+}

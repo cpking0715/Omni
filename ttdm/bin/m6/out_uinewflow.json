@@ -1,0 +1,10 @@
+{
+  "log": [
+    "nav-home: sent",
+    "home: {\"url\":\"https://www.tiktok.com/messages?lang=en\",\"convList\":true,\"convCount\":4,\"input\":true}",
+    "typed: royyen_3",
+    "sugg: {\"sugg\":[{\"e2e\":\"nav-search\",\"txt\":\"Search\",\"href\":\"\",\"avatar\":false},{\"e2e\":\"nav-profile\",\"txt\":\"Profile\",\"href\":\"/@pengpengchen707?lang=en\",\"avatar\":true}]}",
+    "click: clicked: Profile",
+    "newconv: {\"url\":\"https://www.tiktok.com/@pengpengchen707?lang=en\",\"inputExists\":false,\"nick\":\"\",\"sendEls\":[],\"chatCount\":0}"
+  ]
+}

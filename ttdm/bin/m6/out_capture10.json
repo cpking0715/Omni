@@ -1,0 +1,6 @@
+{
+  "log": [
+    "click: clicked",
+    "check: {\"input\":true,\"nick\":\"royyen\",\"err\":false,\"msgCount\":1,\"overlays\":1}"
+  ]
+}

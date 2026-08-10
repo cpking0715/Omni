@@ -1,0 +1,7 @@
+{
+  "log": [
+    "nav-secuid: sent",
+    "poll: {\"ready\":true,\"url\":\"https://www.tiktok.com/messages?lang=en\",\"nick\":\"pengpengchen707\",\"chatCount\":0}",
+    "precheck: {\"sendBefore\":[{\"tag\":\"DIV\",\"aria\":\"Send a message...\",\"e2e\":\"\"}]}"
+  ]
+}

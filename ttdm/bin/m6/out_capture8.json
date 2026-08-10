@@ -1,0 +1,12 @@
+{
+  "log": [
+    "hook: hooked",
+    "click: clicked conv 0",
+    "focus: no input",
+    "inserted: rs-e2e-1786281701524",
+    "btn: NO_VISIBLE_BTN"
+  ],
+  "send_responses": [],
+  "msg": "rs-e2e-1786281701524",
+  "chat_tail": []
+}

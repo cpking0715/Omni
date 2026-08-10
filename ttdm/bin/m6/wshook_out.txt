@@ -1,0 +1,255 @@
+宸叉敞鍏?hook 骞舵墦寮€绉佷俊椤点€?>>> 鐩爣妯″紡: 瀵艰埅鍒?uid=17824815072124 浼氳瘽骞惰嚜鍔ㄥ彂閫佹祴璇曟秷鎭?..
+杈撳叆妗? READY (div[data-e2e=message-input-area] div.DraftEditor-root)
+浼氳瘽鏍￠獙: chat-uniqueid=@
+寮圭獥: ESC 鍏抽棴
+宸茬偣鍑诲彂閫?(鍧愭爣)
+绛夊緟甯ф崟鑾?(4s)...
+hook 鐢熸晥: true | 杩炴帴鏁? 3 | 甯ф暟: 7
+  杩炴帴: wss://im-ws.tiktok.com/ws/v2?fpid=32&service=33554513&method=2&aid=1988&device_id=7664958044560016398&access_key=c23b210eec9aeb43c4ea9b36eeaf7a19&device_platform=web
+  杩炴帴: wss://im-ws.tiktok.com/ws/v2?aid=1459&fpid=9&access_key=08ac725d2a9a3fac7cc3a25bb7a44aec&device_platform=web&ttwid=1|xZWrSyuBP5wzYe8yaUoIJPlQCds-r1IoKWGhSnYsUL0|1786260021|f422bef8d8e613295c22f3aa6150b99dc4994fa682f274bd3960b782dba54465&Web-Sdk-Ms-Token=WHISOSAB-WdEQso1rT23T-O72ybdCXvaaFRok0rqPTjhlcPxXghcCoFWgpaLRD9RRTm16Zb9Y5XxA7Xfhu89zqOFAsL2NpwIBHpus9vMayqFZkVYJeRQvxAlCgoFoD2YFmFMlhhPE0DEDwDr9jHdNCnSIc0TXLk9I0QmR-tscmc=
+  杩炴帴: wss://im-ws.tiktok.com/ws/v2?device_platform=web&version_code=fws_1.0.0&access_key=08ac725d2a9a3fac7cc3a25bb7a44aec&fpid=9&aid=1459&ttwid=1|xZWrSyuBP5wzYe8yaUoIJPlQCds-r1IoKWGhSnYsUL0|1786260021|f422bef8d8e613295c22f3aa6150b99dc4994fa682f274bd3960b782dba54465&xsack=1&xaack=1&xsqos=0
+
+--- 甯?#1 (len=93) ---
+CJFOEJTanav+MxjRgIAQIAI6ATJCRwozCAISEzc2NjQ5NTgwNDQ1NjAwMTYzOTgaEzc2NjQ5NTgwNDQ1NjAwMTYzOTggk9qdq/4zEgQIAxgAEgQIAxgBEgQIAxgC
+--- 瀛楁鏍?---
+f1 varint: 10001
+f2 varint: 1786260188436
+f3 varint: 33554513
+f4 varint: 2
+f7 len1: "2"
+f8 len71: <bytes>
+  f1 len51: <bytes>
+    f1 varint: 2
+    f2 len19: "7664958044560016398"
+    f3 len19: "7664958044560016398"
+    f4 varint: 1786260188435
+  f2 len4: <bytes>
+    f1 varint: 3
+    f3 varint: 0
+  f2 len4: <bytes>
+    f1 varint: 3
+    f3 varint: 1
+  f2 len4: <bytes>
+    f1 varint: 3
+    f3 varint: 2
+
+
+--- 甯?#2 (len=2558) ---
+CJROENuBnqv+MxgFIAEqCwoDYWlkEgQxOTg4KhYKCGFwcF9uYW1lEgp0aWt0b2tfd2ViKg4KB2NoYW5uZWwSA3dlYioZCg9kZXZpY2VfcGxhdGZvcm0SBndlYl9wYyogCglkZXZpY2VfaWQSEzc2NjkzMzQ0MTIzNjYyMTg3NjUqDAoGcmVnaW9uEgJVUyoVCg9wcmlvcml0eV9yZWdpb24SAlVTKg0KAm9zEgd3aW5kb3dzKioKB3JlZmVyZXISH2h0dHBzOi8vd3d3LnRpa3Rvay5jb20vbWVzc2FnZXMqLwoMcm9vdF9yZWZlcmVyEh9odHRwczovL3d3dy50aWt0b2suY29tL21lc3NhZ2VzKhYKDmNvb2tpZV9lbmFibGVkEgR0cnVlKhQKDHNjcmVlbl93aWR0aBIEMTcwNyoVCg1zY3JlZW5faGVpZ2h0EgQxMDY3KhkKEGJyb3dzZXJfbGFuZ3VhZ2USBWVuLVVTKhkKEGJyb3dzZXJfcGxhdGZvcm0SBVdpbjMyKhcKDGJyb3dzZXJfbmFtZRIHTW96aWxsYSp6Cg9icm93c2VyX3ZlcnNpb24SZzUuMCAoV2luZG93cyBOVCAxMC4wOyBXaW42NDsgeDY0KSBBcHBsZVdlYktpdC81MzcuMzYgKEtIVE1MLCBsaWtlIEdlY2tvKSBDaHJvbWUvMTQ5LjAuMC4wIFNhZmFyaS81MzcuMzYqFgoOYnJvd3Nlcl9vbmxpbmUSBHRydWUqQAoIdmVyaWZ5RnASNHZlcmlmeV9tc2Q1N29ndV9EelF1VzdqSV9ReWtzXzRibkRfOUE2cl9xcEhFOHltc0gzU3QqEgoMYXBwX2xhbmd1YWdlEgJlbioWChB3ZWJjYXN0X2xhbmd1YWdlEgJlbioeCgd0el9uYW1lEhNBbWVyaWNhL0xvc19BbmdlbGVzKhcKD2lzX3BhZ2VfdmlzaWJsZRIEdHJ1ZSoTCgtmb2N1c19zdGF0ZRIEdHJ1ZSoWCg1pc19mdWxsc2NyZWVuEgVmYWxzZSoRCgtoaXN0b3J5X2xlbhICMTQqFQoNdXNlcl9pc19sb2dpbhIEdHJ1ZSofChdkYXRhX2NvbGxlY3Rpb25fZW5hYmxlZBIEdHJ1ZSoSCgpmcm9tX2FwcElEEgQxOTg4KgwKBmxvY2FsZRICZW4qfQoKdXNlcl9hZ2VudBJvTW96aWxsYS81LjAgKFdpbmRvd3MgTlQgMTAuMDsgV2luNjQ7IHg2NCkgQXBwbGVXZWJLaXQvNTM3LjM2IChLSFRNTCwgbGlrZSBHZWNrbykgQ2hyb21lLzE0OS4wLjAuMCBTYWZhcmkvNTM3LjM2KsEBChBXZWItU2RrLU1zLVRva2VuEqwBV0hJU09TQUItV2RFUXNvMXJUMjNULU83MnliZENYdmFhRlJvazBycVBUamhsY1B4WGdoY0NvRldncGFMUkQ5UlJUbTE2WmI5WTVYeEE3WGZodTg5enFPRkFzTDJOcHdJQkhwdXM5dk1heXFGWmtWWUplUlF2eEFsQ2dvRm9EMllGbUZNbGhoUEUwREVEd0RyOWpIZE5DblNJYzBUWExrOUkwUW1SLXRzY21jPToCcGJCugoI4gQQlE4aBTEuNy4wIgAoAzAAOh4zMDM1ZjE3OmZlYXQvY2FsbC10cmFjZS1wbHVnaW5COZImNgo0CiYwOjE6MTc4MjQ4MTUwNzIxMjQ6NzY2NDk1ODA0NDU2MDAxNjM5OBCNgsOkvsGJvGoYAUoTNzY2OTMzNDQxMjM2NjIxODc2NVoDd2ViegsKA2FpZBIEMTk4OHoWCghhcHBfbmFtZRIKdGlrdG9rX3dlYnoOCgdjaGFubmVsEgN3ZWJ6GQoPZGV2aWNlX3BsYXRmb3JtEgZ3ZWJfcGN6IAoJZGV2aWNlX2lkEhM3NjY5MzM0NDEyMzY2MjE4NzY1egwKBnJlZ2lvbhICVVN6FQoPcHJpb3JpdHlfcmVnaW9uEgJVU3oNCgJvcxIHd2luZG93c3oqCgdyZWZlcmVyEh9odHRwczovL3d3dy50aWt0b2suY29tL21lc3NhZ2Vzei8KDHJvb3RfcmVmZXJlchIfaHR0cHM6Ly93d3cudGlrdG9rLmNvbS9tZXNzYWdlc3oWCg5jb29raWVfZW5hYmxlZBIEdHJ1ZXoUCgxzY3JlZW5fd2lkdGgSBDE3MDd6FQoNc2NyZWVuX2hlaWdodBIEMTA2N3oZChBicm93c2VyX2xhbmd1YWdlEgVlbi1VU3oZChBicm93c2VyX3BsYXRmb3JtEgVXaW4zMnoXCgxicm93c2VyX25hbWUSB01vemlsbGF6egoPYnJvd3Nlcl92ZXJzaW9uEmc1LjAgKFdpbmRvd3MgTlQgMTAuMDsgV2luNjQ7IHg2NCkgQXBwbGVXZWJLaXQvNTM3LjM2IChLSFRNTCwgbGlrZSBHZWNrbykgQ2hyb21lLzE0OS4wLjAuMCBTYWZhcmkvNTM3LjM2ehYKDmJyb3dzZXJfb25saW5lEgR0cnVlekAKCHZlcmlmeUZwEjR2ZXJpZnlfbXNkNTdvZ3VfRHpRdVc3aklfUXlrc180Ym5EXzlBNnJfcXBIRTh5bXNIM1N0ehIKDGFwcF9sYW5ndWFnZRICZW56FgoQd2ViY2FzdF9sYW5ndWFnZRICZW56HgoHdHpfbmFtZRITQW1lcmljYS9Mb3NfQW5nZWxlc3oXCg9pc19wYWdlX3Zpc2libGUSBHRydWV6EwoLZm9jdXNfc3RhdGUSBHRydWV6FgoNaXNfZnVsbHNjcmVlbhIFZmFsc2V6EQoLaGlzdG9yeV9sZW4SAjE0ehUKDXVzZXJfaXNfbG9naW4SBHRydWV6HwoXZGF0YV9jb2xsZWN0aW9uX2VuYWJsZWQSBHRydWV6EgoKZnJvbV9hcHBJRBIEMTk4OHoMCgZsb2NhbGUSAmVuen0KCnVzZXJfYWdlbnQSb01vemlsbGEvNS4wIChXaW5kb3dzIE5UIDEwLjA7IFdpbjY0OyB4NjQpIEFwcGxlV2ViS2l0LzUzNy4zNiAoS0hUTUwsIGxpa2UgR2Vja28pIENocm9tZS8xNDkuMC4wLjAgU2FmYXJpLzUzNy4zNnrBAQoQV2ViLVNkay1Ncy1Ub2tlbhKsAVdISVNPU0FCLVdkRVFzbzFyVDIzVC1PNzJ5YmRDWHZhYUZSb2swcnFQVGpobGNQeFhnaGNDb0ZXZ3BhTFJEOVJSVG0xNlpiOVk1WHhBN1hmaHU4OXpxT0ZBc0wyTnB3SUJIcHVzOXZNYXlxRlprVllKZVJRdnhBbENnb0ZvRDJZRm1GTWxoaFBFMERFRHdEcjlqSGROQ25TSWMwVFhMazlJMFFtUi10c2NtYz2QAQE=
+--- 瀛楁鏍?---
+f1 varint: 10004
+f2 varint: 1786260193499
+f3 varint: 5
+f4 varint: 1
+f5 len11: <bytes>
+  f1 len3: "aid"
+  f2 len4: "1988"
+f5 len22: "\n\bapp_name\x12\ntiktok_web"
+f5 len14: <bytes>
+  f1 len7: "channel"
+  f2 len3: "web"
+f5 len25: "\n\x0fdevice_platform\x12\x06web_pc"
+f5 len32: "\n\tdevice_id\x12\x137669334412366218765"
+f5 len12: <bytes>
+  f1 len6: "region"
+  f2 len2: "US"
+f5 len21: "\n\x0fpriority_region\x12\x02US"
+f5 len13: <bytes>
+  f1 len2: "os"
+  f2 len7: "windows"
+f5 len42: "\n\areferer\x12\x1fhttps://www.tiktok.com/messages"
+f5 len47: "\n\froot_referer\x12\x1fhttps://www.tiktok.com/messages"
+f5 len22: "\n\x0ecookie_enabled\x12\x04true"
+f5 len20: <bytes>
+  f1 len12: "screen_width"
+  f2 len4: "1707"
+f5 len21: "\n\rscreen_height\x12\x041067"
+f5 len25: "\n\x10browser_language\x12\x05en-US"
+f5 len25: "\n\x10browser_platform\x12\x05Win32"
+f5 len23: "\n\fbrowser_name\x12\aMozilla"
+f5 len122: "\n\x0fbrowser_version\x12g5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+f5 len22: "\n\x0ebrowser_online\x12\x04true"
+f5 len64: "\n\bverifyFp\x124verify_msd57ogu_DzQuW7jI_Qyks_4bnD_9A6r_qpHE8ymsH3St"
+f5 len18: <bytes>
+  f1 len12: "app_language"
+  f2 len2: "en"
+f5 len22: "\n\x10webcast_language\x12\x02en"
+f5 len30: "\n\atz_name\x12\x13America/Los_Angeles"
+f5 len23: "\n\x0fis_page_visible\x12\x04true"
+f5 len19: <bytes>
+  f1 len11: "focus_state"
+  f2 len4: "true"
+f5 len22: "\n\ris_fullscreen\x12\x05false"
+f5 len17: <bytes>
+  f1 len11: "history_len"
+  f2 len2: "14"
+f5 len21: "\n\ruser_is_login\x12\x04true"
+f5 len31: "\n\x17data_collection_enabled\x12\x04true"
+f5 len18: "\n\nfrom_appID\x12\x041988"
+f5 len12: <bytes>
+  f1 len6: "locale"
+  f2 len2: "en"
+f5 len125: "\n\nuser_agent\x12oMozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+f5 len193: "\n\x10Web-Sdk-Ms-Token\x12\xac\x01WHISOSAB-WdEQso1rT23T-O72ybdCXvaaFRok0rqPTjhlcPxXghcCoFWgpaLRD9RRTm16Zb9Y5XxA7Xfhu89zqOFAsL2NpwIBHpus9vMayqFZkVYJeRQvxAlCgoFoD2YFmFMlhhPE0DEDwDr9jHdNCnSIc0TXLk9I0QmR-tscmc="
+f7 len2: "pb"
+f8 len1338: "\b\xe2\x04\x10\x94N\x1a\x051.7.0\"\x00(\x030\x00:\x1e3035f17:feat/call-trace-pluginB9\x92&6\n4\n&0:1:17824815072124:7664958044560016398\x10\x8d\x82盲\xbe\xc1\x89\xbcj\x18\x01J\x137669334412366218765Z\x03webz\v\n\x03aid\x12\x041988z\x16\n\bapp_name\x12\ntiktok_webz\x0e\n\achannel\x12\x03webz\x19\n\x0fdevice_platform\x12\x06web_pcz \n\tdevice_id\x12\x137669334412366218765z\f\n\x06region\x12\x02USz\x15\n\x0fpriority_region\x12\x02USz\r\n\x02os\x12\awindowsz*\n\areferer\x12\x1fhttps://www.tiktok.com/messagesz/\n\froot_referer\x12\x1fhttps://www.tiktok.com/messagesz\x16\n\x0ecookie_enabled\x12\x04truez\x14\n\fscreen_width\x12\x041707z\x15\n\rscreen_height\x12\x041067z\x19\n\x10browser_language\x12\x05en-USz\x19\n\x10browser_platform\x12\x05Win32z\x17\n\fbrowser_name\x12\aMozillazz\n\x0fbrowser_version\x12g5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36z\x16\n\x0ebrowser_online\x12\x04truez@\n\bverifyFp\x124verify_msd57ogu_DzQuW7jI_Qyks_4bnD_9A6r_qpHE8ymsH3Stz\x12\n\fapp_language\x12\x02enz\x16\n\x10webcast_language\x12\x02enz\x1e\n\atz_name\x12\x13America/Los_Angelesz\x17\n\x0fis_page_visible\x12\x04truez\x13\n\vfocus_state\x12\x04truez\x16\n\ris_fullscreen\x12\x05falsez\x11\n\vhistory_len\x12\x0214z\x15\n\ruser_is_login\x12\x04truez\x1f\n\x17data_collection_enabled\x12\x04truez\x12\n\nfrom_appID\x12\x041988z\f\n\x06locale\x12\x02enz}\n\nuser_agent\x12oMozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36z\xc1\x01\n\x10Web-Sdk-Ms-Token\x12\xac\x01WHISOSAB-WdEQso1rT23T-O72ybdCXvaaFRok0rqPTjhlcPxXghcCoFWgpaLRD9RRTm16Zb9Y5XxA7Xfhu89zqOFAsL2NpwIBHpus9vMayqFZkVYJeRQvxAlCgoFoD2YFmFMlhhPE0DEDwDr9jHdNCnSIc0TXLk9I0QmR-tscmc=\x90\x01\x01"
+
+
+--- 甯?#3 (len=2558) ---
+CJROEOexnqv+MxgFIAEqCwoDYWlkEgQxOTg4KhYKCGFwcF9uYW1lEgp0aWt0b2tfd2ViKg4KB2NoYW5uZWwSA3dlYioZCg9kZXZpY2VfcGxhdGZvcm0SBndlYl9wYyogCglkZXZpY2VfaWQSEzc2NjkzMzQ0MTIzNjYyMTg3NjUqDAoGcmVnaW9uEgJVUyoVCg9wcmlvcml0eV9yZWdpb24SAlVTKg0KAm9zEgd3aW5kb3dzKioKB3JlZmVyZXISH2h0dHBzOi8vd3d3LnRpa3Rvay5jb20vbWVzc2FnZXMqLwoMcm9vdF9yZWZlcmVyEh9odHRwczovL3d3dy50aWt0b2suY29tL21lc3NhZ2VzKhYKDmNvb2tpZV9lbmFibGVkEgR0cnVlKhQKDHNjcmVlbl93aWR0aBIEMTcwNyoVCg1zY3JlZW5faGVpZ2h0EgQxMDY3KhkKEGJyb3dzZXJfbGFuZ3VhZ2USBWVuLVVTKhkKEGJyb3dzZXJfcGxhdGZvcm0SBVdpbjMyKhcKDGJyb3dzZXJfbmFtZRIHTW96aWxsYSp6Cg9icm93c2VyX3ZlcnNpb24SZzUuMCAoV2luZG93cyBOVCAxMC4wOyBXaW42NDsgeDY0KSBBcHBsZVdlYktpdC81MzcuMzYgKEtIVE1MLCBsaWtlIEdlY2tvKSBDaHJvbWUvMTQ5LjAuMC4wIFNhZmFyaS81MzcuMzYqFgoOYnJvd3Nlcl9vbmxpbmUSBHRydWUqQAoIdmVyaWZ5RnASNHZlcmlmeV9tc2Q1N29ndV9EelF1VzdqSV9ReWtzXzRibkRfOUE2cl9xcEhFOHltc0gzU3QqEgoMYXBwX2xhbmd1YWdlEgJlbioWChB3ZWJjYXN0X2xhbmd1YWdlEgJlbioeCgd0el9uYW1lEhNBbWVyaWNhL0xvc19BbmdlbGVzKhcKD2lzX3BhZ2VfdmlzaWJsZRIEdHJ1ZSoTCgtmb2N1c19zdGF0ZRIEdHJ1ZSoWCg1pc19mdWxsc2NyZWVuEgVmYWxzZSoRCgtoaXN0b3J5X2xlbhICMTQqFQoNdXNlcl9pc19sb2dpbhIEdHJ1ZSofChdkYXRhX2NvbGxlY3Rpb25fZW5hYmxlZBIEdHJ1ZSoSCgpmcm9tX2FwcElEEgQxOTg4KgwKBmxvY2FsZRICZW4qfQoKdXNlcl9hZ2VudBJvTW96aWxsYS81LjAgKFdpbmRvd3MgTlQgMTAuMDsgV2luNjQ7IHg2NCkgQXBwbGVXZWJLaXQvNTM3LjM2IChLSFRNTCwgbGlrZSBHZWNrbykgQ2hyb21lLzE0OS4wLjAuMCBTYWZhcmkvNTM3LjM2KsEBChBXZWItU2RrLU1zLVRva2VuEqwBV0hJU09TQUItV2RFUXNvMXJUMjNULU83MnliZENYdmFhRlJvazBycVBUamhsY1B4WGdoY0NvRldncGFMUkQ5UlJUbTE2WmI5WTVYeEE3WGZodTg5enFPRkFzTDJOcHdJQkhwdXM5dk1heXFGWmtWWUplUlF2eEFsQ2dvRm9EMllGbUZNbGhoUEUwREVEd0RyOWpIZE5DblNJYzBUWExrOUkwUW1SLXRzY21jPToCcGJCugoI4gQQlE4aBTEuNy4wIgAoAzAAOh4zMDM1ZjE3OmZlYXQvY2FsbC10cmFjZS1wbHVnaW5COZImNgo0CiYwOjE6MTc4MjQ4MTUwNzIxMjQ6NzY2NDk1ODA0NDU2MDAxNjM5OBCNgsOkvsGJvGoYAUoTNzY2OTMzNDQxMjM2NjIxODc2NVoDd2ViegsKA2FpZBIEMTk4OHoWCghhcHBfbmFtZRIKdGlrdG9rX3dlYnoOCgdjaGFubmVsEgN3ZWJ6GQoPZGV2aWNlX3BsYXRmb3JtEgZ3ZWJfcGN6IAoJZGV2aWNlX2lkEhM3NjY5MzM0NDEyMzY2MjE4NzY1egwKBnJlZ2lvbhICVVN6FQoPcHJpb3JpdHlfcmVnaW9uEgJVU3oNCgJvcxIHd2luZG93c3oqCgdyZWZlcmVyEh9odHRwczovL3d3dy50aWt0b2suY29tL21lc3NhZ2Vzei8KDHJvb3RfcmVmZXJlchIfaHR0cHM6Ly93d3cudGlrdG9rLmNvbS9tZXNzYWdlc3oWCg5jb29raWVfZW5hYmxlZBIEdHJ1ZXoUCgxzY3JlZW5fd2lkdGgSBDE3MDd6FQoNc2NyZWVuX2hlaWdodBIEMTA2N3oZChBicm93c2VyX2xhbmd1YWdlEgVlbi1VU3oZChBicm93c2VyX3BsYXRmb3JtEgVXaW4zMnoXCgxicm93c2VyX25hbWUSB01vemlsbGF6egoPYnJvd3Nlcl92ZXJzaW9uEmc1LjAgKFdpbmRvd3MgTlQgMTAuMDsgV2luNjQ7IHg2NCkgQXBwbGVXZWJLaXQvNTM3LjM2IChLSFRNTCwgbGlrZSBHZWNrbykgQ2hyb21lLzE0OS4wLjAuMCBTYWZhcmkvNTM3LjM2ehYKDmJyb3dzZXJfb25saW5lEgR0cnVlekAKCHZlcmlmeUZwEjR2ZXJpZnlfbXNkNTdvZ3VfRHpRdVc3aklfUXlrc180Ym5EXzlBNnJfcXBIRTh5bXNIM1N0ehIKDGFwcF9sYW5ndWFnZRICZW56FgoQd2ViY2FzdF9sYW5ndWFnZRICZW56HgoHdHpfbmFtZRITQW1lcmljYS9Mb3NfQW5nZWxlc3oXCg9pc19wYWdlX3Zpc2libGUSBHRydWV6EwoLZm9jdXNfc3RhdGUSBHRydWV6FgoNaXNfZnVsbHNjcmVlbhIFZmFsc2V6EQoLaGlzdG9yeV9sZW4SAjE0ehUKDXVzZXJfaXNfbG9naW4SBHRydWV6HwoXZGF0YV9jb2xsZWN0aW9uX2VuYWJsZWQSBHRydWV6EgoKZnJvbV9hcHBJRBIEMTk4OHoMCgZsb2NhbGUSAmVuen0KCnVzZXJfYWdlbnQSb01vemlsbGEvNS4wIChXaW5kb3dzIE5UIDEwLjA7IFdpbjY0OyB4NjQpIEFwcGxlV2ViS2l0LzUzNy4zNiAoS0hUTUwsIGxpa2UgR2Vja28pIENocm9tZS8xNDkuMC4wLjAgU2FmYXJpLzUzNy4zNnrBAQoQV2ViLVNkay1Ncy1Ub2tlbhKsAVdISVNPU0FCLVdkRVFzbzFyVDIzVC1PNzJ5YmRDWHZhYUZSb2swcnFQVGpobGNQeFhnaGNDb0ZXZ3BhTFJEOVJSVG0xNlpiOVk1WHhBN1hmaHU4OXpxT0ZBc0wyTnB3SUJIcHVzOXZNYXlxRlprVllKZVJRdnhBbENnb0ZvRDJZRm1GTWxoaFBFMERFRHdEcjlqSGROQ25TSWMwVFhMazlJMFFtUi10c2NtYz2QAQE=
+--- 瀛楁鏍?---
+f1 varint: 10004
+f2 varint: 1786260199655
+f3 varint: 5
+f4 varint: 1
+f5 len11: <bytes>
+  f1 len3: "aid"
+  f2 len4: "1988"
+f5 len22: "\n\bapp_name\x12\ntiktok_web"
+f5 len14: <bytes>
+  f1 len7: "channel"
+  f2 len3: "web"
+f5 len25: "\n\x0fdevice_platform\x12\x06web_pc"
+f5 len32: "\n\tdevice_id\x12\x137669334412366218765"
+f5 len12: <bytes>
+  f1 len6: "region"
+  f2 len2: "US"
+f5 len21: "\n\x0fpriority_region\x12\x02US"
+f5 len13: <bytes>
+  f1 len2: "os"
+  f2 len7: "windows"
+f5 len42: "\n\areferer\x12\x1fhttps://www.tiktok.com/messages"
+f5 len47: "\n\froot_referer\x12\x1fhttps://www.tiktok.com/messages"
+f5 len22: "\n\x0ecookie_enabled\x12\x04true"
+f5 len20: <bytes>
+  f1 len12: "screen_width"
+  f2 len4: "1707"
+f5 len21: "\n\rscreen_height\x12\x041067"
+f5 len25: "\n\x10browser_language\x12\x05en-US"
+f5 len25: "\n\x10browser_platform\x12\x05Win32"
+f5 len23: "\n\fbrowser_name\x12\aMozilla"
+f5 len122: "\n\x0fbrowser_version\x12g5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+f5 len22: "\n\x0ebrowser_online\x12\x04true"
+f5 len64: "\n\bverifyFp\x124verify_msd57ogu_DzQuW7jI_Qyks_4bnD_9A6r_qpHE8ymsH3St"
+f5 len18: <bytes>
+  f1 len12: "app_language"
+  f2 len2: "en"
+f5 len22: "\n\x10webcast_language\x12\x02en"
+f5 len30: "\n\atz_name\x12\x13America/Los_Angeles"
+f5 len23: "\n\x0fis_page_visible\x12\x04true"
+f5 len19: <bytes>
+  f1 len11: "focus_state"
+  f2 len4: "true"
+f5 len22: "\n\ris_fullscreen\x12\x05false"
+f5 len17: <bytes>
+  f1 len11: "history_len"
+  f2 len2: "14"
+f5 len21: "\n\ruser_is_login\x12\x04true"
+f5 len31: "\n\x17data_collection_enabled\x12\x04true"
+f5 len18: "\n\nfrom_appID\x12\x041988"
+f5 len12: <bytes>
+  f1 len6: "locale"
+  f2 len2: "en"
+f5 len125: "\n\nuser_agent\x12oMozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+f5 len193: "\n\x10Web-Sdk-Ms-Token\x12\xac\x01WHISOSAB-WdEQso1rT23T-O72ybdCXvaaFRok0rqPTjhlcPxXghcCoFWgpaLRD9RRTm16Zb9Y5XxA7Xfhu89zqOFAsL2NpwIBHpus9vMayqFZkVYJeRQvxAlCgoFoD2YFmFMlhhPE0DEDwDr9jHdNCnSIc0TXLk9I0QmR-tscmc="
+f7 len2: "pb"
+f8 len1338: "\b\xe2\x04\x10\x94N\x1a\x051.7.0\"\x00(\x030\x00:\x1e3035f17:feat/call-trace-pluginB9\x92&6\n4\n&0:1:17824815072124:7664958044560016398\x10\x8d\x82盲\xbe\xc1\x89\xbcj\x18\x01J\x137669334412366218765Z\x03webz\v\n\x03aid\x12\x041988z\x16\n\bapp_name\x12\ntiktok_webz\x0e\n\achannel\x12\x03webz\x19\n\x0fdevice_platform\x12\x06web_pcz \n\tdevice_id\x12\x137669334412366218765z\f\n\x06region\x12\x02USz\x15\n\x0fpriority_region\x12\x02USz\r\n\x02os\x12\awindowsz*\n\areferer\x12\x1fhttps://www.tiktok.com/messagesz/\n\froot_referer\x12\x1fhttps://www.tiktok.com/messagesz\x16\n\x0ecookie_enabled\x12\x04truez\x14\n\fscreen_width\x12\x041707z\x15\n\rscreen_height\x12\x041067z\x19\n\x10browser_language\x12\x05en-USz\x19\n\x10browser_platform\x12\x05Win32z\x17\n\fbrowser_name\x12\aMozillazz\n\x0fbrowser_version\x12g5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36z\x16\n\x0ebrowser_online\x12\x04truez@\n\bverifyFp\x124verify_msd57ogu_DzQuW7jI_Qyks_4bnD_9A6r_qpHE8ymsH3Stz\x12\n\fapp_language\x12\x02enz\x16\n\x10webcast_language\x12\x02enz\x1e\n\atz_name\x12\x13America/Los_Angelesz\x17\n\x0fis_page_visible\x12\x04truez\x13\n\vfocus_state\x12\x04truez\x16\n\ris_fullscreen\x12\x05falsez\x11\n\vhistory_len\x12\x0214z\x15\n\ruser_is_login\x12\x04truez\x1f\n\x17data_collection_enabled\x12\x04truez\x12\n\nfrom_appID\x12\x041988z\f\n\x06locale\x12\x02enz}\n\nuser_agent\x12oMozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36z\xc1\x01\n\x10Web-Sdk-Ms-Token\x12\xac\x01WHISOSAB-WdEQso1rT23T-O72ybdCXvaaFRok0rqPTjhlcPxXghcCoFWgpaLRD9RRTm16Zb9Y5XxA7Xfhu89zqOFAsL2NpwIBHpus9vMayqFZkVYJeRQvxAlCgoFoD2YFmFMlhhPE0DEDwDr9jHdNCnSIc0TXLk9I0QmR-tscmc=\x90\x01\x01"
+
+
+--- 甯?#4 (len=2558) ---
+CJROEMLonqv+MxgFIAEqCwoDYWlkEgQxOTg4KhYKCGFwcF9uYW1lEgp0aWt0b2tfd2ViKg4KB2NoYW5uZWwSA3dlYioZCg9kZXZpY2VfcGxhdGZvcm0SBndlYl9wYyogCglkZXZpY2VfaWQSEzc2NjkzMzQ0MTIzNjYyMTg3NjUqDAoGcmVnaW9uEgJVUyoVCg9wcmlvcml0eV9yZWdpb24SAlVTKg0KAm9zEgd3aW5kb3dzKioKB3JlZmVyZXISH2h0dHBzOi8vd3d3LnRpa3Rvay5jb20vbWVzc2FnZXMqLwoMcm9vdF9yZWZlcmVyEh9odHRwczovL3d3dy50aWt0b2suY29tL21lc3NhZ2VzKhYKDmNvb2tpZV9lbmFibGVkEgR0cnVlKhQKDHNjcmVlbl93aWR0aBIEMTcwNyoVCg1zY3JlZW5faGVpZ2h0EgQxMDY3KhkKEGJyb3dzZXJfbGFuZ3VhZ2USBWVuLVVTKhkKEGJyb3dzZXJfcGxhdGZvcm0SBVdpbjMyKhcKDGJyb3dzZXJfbmFtZRIHTW96aWxsYSp6Cg9icm93c2VyX3ZlcnNpb24SZzUuMCAoV2luZG93cyBOVCAxMC4wOyBXaW42NDsgeDY0KSBBcHBsZVdlYktpdC81MzcuMzYgKEtIVE1MLCBsaWtlIEdlY2tvKSBDaHJvbWUvMTQ5LjAuMC4wIFNhZmFyaS81MzcuMzYqFgoOYnJvd3Nlcl9vbmxpbmUSBHRydWUqQAoIdmVyaWZ5RnASNHZlcmlmeV9tc2Q1N29ndV9EelF1VzdqSV9ReWtzXzRibkRfOUE2cl9xcEhFOHltc0gzU3QqEgoMYXBwX2xhbmd1YWdlEgJlbioWChB3ZWJjYXN0X2xhbmd1YWdlEgJlbioeCgd0el9uYW1lEhNBbWVyaWNhL0xvc19BbmdlbGVzKhcKD2lzX3BhZ2VfdmlzaWJsZRIEdHJ1ZSoTCgtmb2N1c19zdGF0ZRIEdHJ1ZSoWCg1pc19mdWxsc2NyZWVuEgVmYWxzZSoRCgtoaXN0b3J5X2xlbhICMTQqFQoNdXNlcl9pc19sb2dpbhIEdHJ1ZSofChdkYXRhX2NvbGxlY3Rpb25fZW5hYmxlZBIEdHJ1ZSoSCgpmcm9tX2FwcElEEgQxOTg4KgwKBmxvY2FsZRICZW4qfQoKdXNlcl9hZ2VudBJvTW96aWxsYS81LjAgKFdpbmRvd3MgTlQgMTAuMDsgV2luNjQ7IHg2NCkgQXBwbGVXZWJLaXQvNTM3LjM2IChLSFRNTCwgbGlrZSBHZWNrbykgQ2hyb21lLzE0OS4wLjAuMCBTYWZhcmkvNTM3LjM2KsEBChBXZWItU2RrLU1zLVRva2VuEqwBV0hJU09TQUItV2RFUXNvMXJUMjNULU83MnliZENYdmFhRlJvazBycVBUamhsY1B4WGdoY0NvRldncGFMUkQ5UlJUbTE2WmI5WTVYeEE3WGZodTg5enFPRkFzTDJOcHdJQkhwdXM5dk1heXFGWmtWWUplUlF2eEFsQ2dvRm9EMllGbUZNbGhoUEUwREVEd0RyOWpIZE5DblNJYzBUWExrOUkwUW1SLXRzY21jPToCcGJCugoI4gQQlE4aBTEuNy4wIgAoAzAAOh4zMDM1ZjE3OmZlYXQvY2FsbC10cmFjZS1wbHVnaW5COZImNgo0CiYwOjE6MTc4MjQ4MTUwNzIxMjQ6NzY2NDk1ODA0NDU2MDAxNjM5OBCNgsOkvsGJvGoYAUoTNzY2OTMzNDQxMjM2NjIxODc2NVoDd2ViegsKA2FpZBIEMTk4OHoWCghhcHBfbmFtZRIKdGlrdG9rX3dlYnoOCgdjaGFubmVsEgN3ZWJ6GQoPZGV2aWNlX3BsYXRmb3JtEgZ3ZWJfcGN6IAoJZGV2aWNlX2lkEhM3NjY5MzM0NDEyMzY2MjE4NzY1egwKBnJlZ2lvbhICVVN6FQoPcHJpb3JpdHlfcmVnaW9uEgJVU3oNCgJvcxIHd2luZG93c3oqCgdyZWZlcmVyEh9odHRwczovL3d3dy50aWt0b2suY29tL21lc3NhZ2Vzei8KDHJvb3RfcmVmZXJlchIfaHR0cHM6Ly93d3cudGlrdG9rLmNvbS9tZXNzYWdlc3oWCg5jb29raWVfZW5hYmxlZBIEdHJ1ZXoUCgxzY3JlZW5fd2lkdGgSBDE3MDd6FQoNc2NyZWVuX2hlaWdodBIEMTA2N3oZChBicm93c2VyX2xhbmd1YWdlEgVlbi1VU3oZChBicm93c2VyX3BsYXRmb3JtEgVXaW4zMnoXCgxicm93c2VyX25hbWUSB01vemlsbGF6egoPYnJvd3Nlcl92ZXJzaW9uEmc1LjAgKFdpbmRvd3MgTlQgMTAuMDsgV2luNjQ7IHg2NCkgQXBwbGVXZWJLaXQvNTM3LjM2IChLSFRNTCwgbGlrZSBHZWNrbykgQ2hyb21lLzE0OS4wLjAuMCBTYWZhcmkvNTM3LjM2ehYKDmJyb3dzZXJfb25saW5lEgR0cnVlekAKCHZlcmlmeUZwEjR2ZXJpZnlfbXNkNTdvZ3VfRHpRdVc3aklfUXlrc180Ym5EXzlBNnJfcXBIRTh5bXNIM1N0ehIKDGFwcF9sYW5ndWFnZRICZW56FgoQd2ViY2FzdF9sYW5ndWFnZRICZW56HgoHdHpfbmFtZRITQW1lcmljYS9Mb3NfQW5nZWxlc3oXCg9pc19wYWdlX3Zpc2libGUSBHRydWV6EwoLZm9jdXNfc3RhdGUSBHRydWV6FgoNaXNfZnVsbHNjcmVlbhIFZmFsc2V6EQoLaGlzdG9yeV9sZW4SAjE0ehUKDXVzZXJfaXNfbG9naW4SBHRydWV6HwoXZGF0YV9jb2xsZWN0aW9uX2VuYWJsZWQSBHRydWV6EgoKZnJvbV9hcHBJRBIEMTk4OHoMCgZsb2NhbGUSAmVuen0KCnVzZXJfYWdlbnQSb01vemlsbGEvNS4wIChXaW5kb3dzIE5UIDEwLjA7IFdpbjY0OyB4NjQpIEFwcGxlV2ViS2l0LzUzNy4zNiAoS0hUTUwsIGxpa2UgR2Vja28pIENocm9tZS8xNDkuMC4wLjAgU2FmYXJpLzUzNy4zNnrBAQoQV2ViLVNkay1Ncy1Ub2tlbhKsAVdISVNPU0FCLVdkRVFzbzFyVDIzVC1PNzJ5YmRDWHZhYUZSb2swcnFQVGpobGNQeFhnaGNDb0ZXZ3BhTFJEOVJSVG0xNlpiOVk1WHhBN1hmaHU4OXpxT0ZBc0wyTnB3SUJIcHVzOXZNYXlxRlprVllKZVJRdnhBbENnb0ZvRDJZRm1GTWxoaFBFMERFRHdEcjlqSGROQ25TSWMwVFhMazlJMFFtUi10c2NtYz2QAQE=
+--- 瀛楁鏍?---
+f1 varint: 10004
+f2 varint: 1786260206658
+f3 varint: 5
+f4 varint: 1
+f5 len11: <bytes>
+  f1 len3: "aid"
+  f2 len4: "1988"
+f5 len22: "\n\bapp_name\x12\ntiktok_web"
+f5 len14: <bytes>
+  f1 len7: "channel"
+  f2 len3: "web"
+f5 len25: "\n\x0fdevice_platform\x12\x06web_pc"
+f5 len32: "\n\tdevice_id\x12\x137669334412366218765"
+f5 len12: <bytes>
+  f1 len6: "region"
+  f2 len2: "US"
+f5 len21: "\n\x0fpriority_region\x12\x02US"
+f5 len13: <bytes>
+  f1 len2: "os"
+  f2 len7: "windows"
+f5 len42: "\n\areferer\x12\x1fhttps://www.tiktok.com/messages"
+f5 len47: "\n\froot_referer\x12\x1fhttps://www.tiktok.com/messages"
+f5 len22: "\n\x0ecookie_enabled\x12\x04true"
+f5 len20: <bytes>
+  f1 len12: "screen_width"
+  f2 len4: "1707"
+f5 len21: "\n\rscreen_height\x12\x041067"
+f5 len25: "\n\x10browser_language\x12\x05en-US"
+f5 len25: "\n\x10browser_platform\x12\x05Win32"
+f5 len23: "\n\fbrowser_name\x12\aMozilla"
+f5 len122: "\n\x0fbrowser_version\x12g5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+f5 len22: "\n\x0ebrowser_online\x12\x04true"
+f5 len64: "\n\bverifyFp\x124verify_msd57ogu_DzQuW7jI_Qyks_4bnD_9A6r_qpHE8ymsH3St"
+f5 len18: <bytes>
+  f1 len12: "app_language"
+  f2 len2: "en"
+f5 len22: "\n\x10webcast_language\x12\x02en"
+f5 len30: "\n\atz_name\x12\x13America/Los_Angeles"
+f5 len23: "\n\x0fis_page_visible\x12\x04true"
+f5 len19: <bytes>
+  f1 len11: "focus_state"
+  f2 len4: "true"
+f5 len22: "\n\ris_fullscreen\x12\x05false"
+f5 len17: <bytes>
+  f1 len11: "history_len"
+  f2 len2: "14"
+f5 len21: "\n\ruser_is_login\x12\x04true"
+f5 len31: "\n\x17data_collection_enabled\x12\x04true"
+f5 len18: "\n\nfrom_appID\x12\x041988"
+f5 len12: <bytes>
+  f1 len6: "locale"
+  f2 len2: "en"
+f5 len125: "\n\nuser_agent\x12oMozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+f5 len193: "\n\x10Web-Sdk-Ms-Token\x12\xac\x01WHISOSAB-WdEQso1rT23T-O72ybdCXvaaFRok0rqPTjhlcPxXghcCoFWgpaLRD9RRTm16Zb9Y5XxA7Xfhu89zqOFAsL2NpwIBHpus9vMayqFZkVYJeRQvxAlCgoFoD2YFmFMlhhPE0DEDwDr9jHdNCnSIc0TXLk9I0QmR-tscmc="
+f7 len2: "pb"
+f8 len1338: "\b\xe2\x04\x10\x94N\x1a\x051.7.0\"\x00(\x030\x00:\x1e3035f17:feat/call-trace-pluginB9\x92&6\n4\n&0:1:17824815072124:7664958044560016398\x10\x8d\x82盲\xbe\xc1\x89\xbcj\x18\x01J\x137669334412366218765Z\x03webz\v\n\x03aid\x12\x041988z\x16\n\bapp_name\x12\ntiktok_webz\x0e\n\achannel\x12\x03webz\x19\n\x0fdevice_platform\x12\x06web_pcz \n\tdevice_id\x12\x137669334412366218765z\f\n\x06region\x12\x02USz\x15\n\x0fpriority_region\x12\x02USz\r\n\x02os\x12\awindowsz*\n\areferer\x12\x1fhttps://www.tiktok.com/messagesz/\n\froot_referer\x12\x1fhttps://www.tiktok.com/messagesz\x16\n\x0ecookie_enabled\x12\x04truez\x14\n\fscreen_width\x12\x041707z\x15\n\rscreen_height\x12\x041067z\x19\n\x10browser_language\x12\x05en-USz\x19\n\x10browser_platform\x12\x05Win32z\x17\n\fbrowser_name\x12\aMozillazz\n\x0fbrowser_version\x12g5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36z\x16\n\x0ebrowser_online\x12\x04truez@\n\bverifyFp\x124verify_msd57ogu_DzQuW7jI_Qyks_4bnD_9A6r_qpHE8ymsH3Stz\x12\n\fapp_language\x12\x02enz\x16\n\x10webcast_language\x12\x02enz\x1e\n\atz_name\x12\x13America/Los_Angelesz\x17\n\x0fis_page_visible\x12\x04truez\x13\n\vfocus_state\x12\x04truez\x16\n\ris_fullscreen\x12\x05falsez\x11\n\vhistory_len\x12\x0214z\x15\n\ruser_is_login\x12\x04truez\x1f\n\x17data_collection_enabled\x12\x04truez\x12\n\nfrom_appID\x12\x041988z\f\n\x06locale\x12\x02enz}\n\nuser_agent\x12oMozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36z\xc1\x01\n\x10Web-Sdk-Ms-Token\x12\xac\x01WHISOSAB-WdEQso1rT23T-O72ybdCXvaaFRok0rqPTjhlcPxXghcCoFWgpaLRD9RRTm16Zb9Y5XxA7Xfhu89zqOFAsL2NpwIBHpus9vMayqFZkVYJeRQvxAlCgoFoD2YFmFMlhhPE0DEDwDr9jHdNCnSIc0TXLk9I0QmR-tscmc=\x90\x01\x01"
+
+
+--- 甯?#5 (len=2) ---
+aGk=
+--- 瀛楁鏍?---
+f13 varint: 105
+
+
+--- 甯?#6 (len=93) ---
+CJJOEK/Gn6v+MxjRgIAQIAI6ATJCRwozCAISEzc2NjQ5NTgwNDQ1NjAwMTYzOTgaEzc2NjQ5NTgwNDQ1NjAwMTYzOTggrsafq/4zEgQIAxgAEgQIAxgBEgQIAxgC
+--- 瀛楁鏍?---
+f1 varint: 10002
+f2 varint: 1786260218671
+f3 varint: 33554513
+f4 varint: 2
+f7 len1: "2"
+f8 len71: <bytes>
+  f1 len51: <bytes>
+    f1 varint: 2
+    f2 len19: "7664958044560016398"
+    f3 len19: "7664958044560016398"
+    f4 varint: 1786260218670
+  f2 len4: <bytes>
+    f1 varint: 3
+    f3 varint: 0
+  f2 len4: <bytes>
+    f1 varint: 3
+    f3 varint: 1
+  f2 len4: <bytes>
+    f1 varint: 3
+    f3 varint: 2
+
+
+--- 甯?#7 (len=2) ---
+aGk=
+--- 瀛楁鏍?---
+f13 varint: 105
+

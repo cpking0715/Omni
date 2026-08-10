@@ -1,0 +1,19 @@
+{
+  "send_responses": [],
+  "msg": "rs-v6-1786291722499",
+  "log": [
+    "hook: hooked",
+    "reload: sent",
+    "open: {\"nick\":\"royyen\",\"input\":true}",
+    "coord: {\"x\":589,\"y\":475}",
+    "focus: focused-ed",
+    "inserted: rs-v6-1786291722499",
+    "check: {\"edText\":\"rs-v6-1786291722499\",\"phVisible\":false,\"sendEls\":[{\"tag\":\"DIV\",\"aria\":\"Send a message...\",\"e2e\":\"\",\"x\":421,\"y\":466,\"w\":289,\"h\":18},{\"tag\":\"svg\",\"aria\":\"Send\",\"e2e\":\"dm-new-send-btn\",\"x\":738,\"y\":459,\"w\":32,\"h\":32}]}",
+    "send-method: {\"method\":\"click\",\"x\":754,\"y\":475}",
+    "send-clicked"
+  ],
+  "input_after": "rs-v6-1786291722499",
+  "chat_tail": [
+    "Your content is amazing! Check out our page too 🙌"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "variants": [
+    {
+      "name": "A_nosign",
+      "status": 200,
+      "body": "\bd\u0010�N\u0018\u0000\"\u0002OK(\u00032�\u0002�\u0006�\u0002\b��������j\u0018\u0003\"$b3cbfe26-7d18-4bd1-ad7a-d53faf766ed7(\u00022�\u0002{\"status_code\":7193,\"tips\":\"\",\"status_msg\":{\"msg_type\":1,\"msg_content\":{\"tips\":\"You can only send up to 1 message before this user accepts your message request.\"}},\"decision_type\":\"\",\"raw_check_code\":7193,\"event_tracking\":{\"s",
+      "url": "https://im-api.tiktok.com/v1/message/send?aid=1988&version_code=1.0.0&app_name=tiktok_web&device_platform=web_pc"
+    },
+    {
+      "name": "B_snapshot",
+      "status": 200,
+      "body": "\bd\u0010�N\u0018\u0000\"\u0002OK(\u00032�\u0002�\u0006�\u0002\b��������j\u0018\u0003\"$b3cbfe26-7d18-4bd1-ad7a-d53faf766ed7(\u00022�\u0002{\"status_code\":7193,\"tips\":\"\",\"status_msg\":{\"msg_type\":1,\"msg_content\":{\"tips\":\"You can only send up to 1 message before this user accepts your message request.\"}},\"decision_type\":\"\",\"raw_check_code\":7193,\"event_tracking\":{\"s",
+      "url": "https://im-api.tiktok.com/v1/message/send?aid=1988&version_code=1.0.0&app_name=tiktok_web&device_platform=web_pc&X-Dynosaur=MO-m/pHk4jJ868ZraN3owQXP/WdBEP4JCRgy"
+    },
+    {
+      "name": "C_newbogus",
+      "status": 200,
+      "body": "\bd\u0010�N\u0018\u0000\"\u0002OK(\u00032�\u0002�\u0006�\u0002\b��������j\u0018\u0003\"$b3cbfe26-7d18-4bd1-ad7a-d53faf766ed7(\u00022�\u0002{\"status_code\":7193,\"tips\":\"\",\"status_msg\":{\"msg_type\":1,\"msg_content\":{\"tips\":\"You can only send up to 1 message before this user accepts your message request.\"}},\"decision_type\":\"\",\"raw_check_code\":7193,\"event_tracking\":{\"s",
+      "url": "https://im-api.tiktok.com/v1/message/send?aid=1988&version_code=1.0.0&app_name=tiktok_web&device_platform=web_pc&X-Dynosaur=MO-m/pHk4jJ868ZraN3owQXP/WdBEP4JCRgy"
+    }
+  ],
+  "new_x_bogus": "64zmV7hvEFdCQjdc"
+}

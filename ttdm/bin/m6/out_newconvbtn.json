@@ -1,0 +1,8 @@
+{
+  "log": [
+    "nav: sent",
+    "newconv: {\"url\":\"https://www.tiktok.com/messages?lang=en&u=7479823623491208199\",\"inputExists\":false,\"sendEls\":[],\"nick\":\"\",\"hasErr\":false,\"inputAreaHTML\":\"\"}",
+    "typed: rs-newconv-1786291282290",
+    "after-input: {\"sendEls\":[{\"tag\":\"DIV\",\"aria\":\"Send a message...\",\"e2e\":\"\",\"x\":421,\"y\":466,\"w\":337,\"h\":18}],\"inputText\":\"Send a message...\",\"placeholderVisible\":true}"
+  ]
+}

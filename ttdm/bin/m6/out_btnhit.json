@@ -1,0 +1,5 @@
+{
+  "log": [
+    "hit: {\"sendExists\":true,\"sendRect\":{\"x\":738,\"y\":459,\"w\":32,\"h\":32},\"sendCenter\":{\"x\":754,\"y\":475},\"hits\":{\"center\":{\"tag\":\"path\",\"aria\":\"\",\"e2e\":\"\",\"cls\":\"[object SVGAnimatedString]\",\"closestBtn\":\"Send\"},\"topRight\":{\"tag\":\"path\",\"aria\":\"\",\"e2e\":\"\",\"cls\":\"[object SVGAnimatedString]\",\"closestBtn\":\"Send\"},\"bottomRight\":{\"tag\":\"svg\",\"aria\":\"Send\",\"e2e\":\"dm-new-send-btn\",\"cls\":\"[object SVGAnimatedString]\",\"closestBtn\":\"Send\"},\"right\":{\"tag\":\"svg\",\"aria\":\"Send\",\"e2e\":\"dm-new-send-btn\",\"cls\":\"[object SVGAnimatedString]\",\"closestBtn\":\"Send\"}},\"sendParent\":{\"tag\":\"svg\",\"disabled\":null,\"cls\":\"[object SVGAnimatedString]\"},\"inputText\":\"rs-v6-1786291722499rs-v7-1786291805459rs-uiws-1786\"}"
+  ]
+}

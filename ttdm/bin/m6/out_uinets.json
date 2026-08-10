@@ -1,0 +1,18 @@
+{
+  "err_texts": [],
+  "msg": "rs-net-1786292106465",
+  "btn_still": true,
+  "chat_tail": [
+    "Your content is amazing! Check out our page too 🙌"
+  ],
+  "log": [
+    "net-enabled",
+    "open: royyen",
+    "coord: {\"x\":565,\"y\":475}",
+    "inserted: rs-net-1786292106465",
+    "btn: {\"x\":764,\"y\":485}",
+    "clicked"
+  ],
+  "net_events": [],
+  "input_after": "rs-enter2-1786292008493rs-net-178629210646543/6000"
+}

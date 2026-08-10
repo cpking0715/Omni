@@ -1,0 +1,8 @@
+page ws: ws://127.0.0.1:55622/devtools/page/6B64AE6B23D692A63DA704DE25806027
+System.Threading.Tasks.VoidTaskResult
+Network enabled
+=== 发送按钮: 754|475 ===
+已点击发送
+WS-SENT len=2 hi
+WS-SENT len=124 CKlOEPqiyqv+MxjRgIAQIAI6ATJCRwozCAISEzc2NjQ5NTgwNDQ1NjAwMTYzOTgaEzc2NjQ5NTgwNDQ1NjAwMTYzOTgg+qLKq/4zEgQIAxgAEgQIAxgBEgQIAxgC
+WS-RECV len=1384

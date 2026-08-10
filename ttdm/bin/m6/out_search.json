@@ -1,0 +1,7 @@
+{
+  "log": [
+    "hook: hooked",
+    "search: {\"results\":[{\"e2e\":\"search-box\",\"txt\":\"\",\"href\":\"\"},{\"e2e\":\"search-user-input\",\"txt\":\"\",\"href\":\"\"},{\"e2e\":\"reset-search-form\",\"txt\":\"\",\"href\":\"\"},{\"e2e\":\"search-box-button\",\"txt\":\"\",\"href\":\"\"},{\"e2e\":\"nav-search\",\"txt\":\"royyen\",\"href\":\"\"},{\"e2e\":\"dm-new-conversation-list\",\"txt\":\"royyenYour content is amazing! Check out our page too 🙌8/2/\",\"href\":\"\"},{\"e2e\":\"dm-new-conversation-item\",\"txt\":\"royyenYour content is amazing! Check out our page too 🙌8/2/\",\"href\":\"\"},{\"e2e\":\"dm-new-conversation-nickname\",\"txt\":\"royyen\",\"href\":\"\"}]}",
+    "net: [\"F|https://www.tiktok.com/api/search/general/preview/?WebIdLastTime=1785656072&aid=1988&app_language=en&app_name=tiktok_web&browser_language=en-US&browser_name=Mozilla&browser_online=true&browser_platform=Win32&browser_version=5.0%20%28Windows%20NT%2010.0%3B%20Win64%3B%20x64%29%20AppleWebKit%2F537.36%20%28KHTML%2C%20like%20Gecko%29%20Chrome%2F149.0.0.0%20Safari%2F537.36&channel=tiktok_web&cookie_enabled=true&data_collection_enabled=true&device_id=7669334412366218765&device_platform=web_pc&focus_s\",\"X|https://im-api.tiktok.com/v1/message/get_by_user_combo\"]"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "variants": [
+    {
+      "status": 200,
+      "name": "D_emptymeta_nosign",
+      "tips": "",
+      "bodylen": 398,
+      "biz_code": 7193
+    },
+    {
+      "status": 200,
+      "name": "E_emptymeta_signed",
+      "tips": "",
+      "bodylen": 397,
+      "biz_code": 7193
+    },
+    {
+      "status": 200,
+      "name": "F_meta_nosign",
+      "tips": "",
+      "bodylen": 398,
+      "biz_code": 7193
+    }
+  ]
+}

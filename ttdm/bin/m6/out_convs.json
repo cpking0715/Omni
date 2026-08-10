@@ -1,0 +1,56 @@
+{
+  "conversations": [
+    {
+      "detail": {
+        "nick": "royyen",
+        "msgs": [
+          "Your content is amazing! Check out our page too 🙌"
+        ],
+        "input": true,
+        "msgs_count": 1
+      },
+      "nick": "royyen",
+      "text": "royyenYour content is amazing! Check out our page too 🙌8/2/2026",
+      "i": 0
+    },
+    {
+      "detail": {
+        "nick": "user17824815072124",
+        "msgs": [
+          "Your content is amazing! Check out our page too 🙌"
+        ],
+        "input": true,
+        "msgs_count": 1
+      },
+      "nick": "user17824815072124",
+      "text": "user17824815072124Your content is amazing! Check out our page too 🙌8/2/2026",
+      "i": 1
+    },
+    {
+      "detail": {
+        "nick": "Taylor Swift",
+        "msgs": [
+          "Hi! Just came across your profile and really love your content. Keep it up!"
+        ],
+        "input": true,
+        "msgs_count": 1
+      },
+      "nick": "Taylor Swift",
+      "text": "Taylor SwiftHi! Just came across your profile and really love your content. Keep",
+      "i": 2
+    },
+    {
+      "detail": {
+        "nick": "Colorado Ped Patrol",
+        "msgs": [
+          "Hey! I came across your content and really liked it 😊"
+        ],
+        "input": true,
+        "msgs_count": 1
+      },
+      "nick": "Colorado Ped Patrol",
+      "text": "Colorado Ped PatrolHey! I came across your content and really liked it 😊8/2/202",
+      "i": 3
+    }
+  ]
+}

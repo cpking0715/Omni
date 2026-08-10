@@ -1,0 +1,8 @@
+{
+  "log": [
+    "obj: {\"hasAcrawler\":true,\"hasWebmssdk\":false,\"acrawlerKeys\":[\"frontierSign\",\"getReferer\",\"init\",\"isWebmssdk\",\"registerWsSigner\",\"report\",\"setTTWebid\",\"setTTWebidV2\",\"setTTWid\",\"setUserMode\"],\"signImpl\":\"undefined\"}",
+    "frontierSign: {\"urlMode\":\"{\\\"X-Bogus\\\":\\\"WMWr7VYcol8Lmz0C\\\"}\"}",
+    "x-bogus: no-match",
+    "perf-entries: []"
+  ]
+}

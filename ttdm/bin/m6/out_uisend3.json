@@ -1,0 +1,14 @@
+{
+  "send_responses": [],
+  "input_after": "Send a message...",
+  "msg": "rs-enter-1786291523732",
+  "chat_tail": [
+    "Your content is amazing! Check out our page too 🙌"
+  ],
+  "log": [
+    "hook: hooked",
+    "typed: rs-enter-1786291523732",
+    "check: {\"len\":17,\"head\":\"Send a message...\",\"phVisible\":true}",
+    "enter: sent"
+  ]
+}

@@ -1,0 +1,26 @@
+# 编译产物
+*.exe
+*.dll
+*.pdb
+
+# 数据库 / 敏感数据
+*.db
+*.db-wal
+*.db-shm
+*.sqlite
+ck.txt
+*_ck*.txt
+
+# 抓包快照中的敏感凭证 (cookie/session/签名)
+**/account.json
+**/m6_account.json
+**/sign_snapshot.json
+**/send_body.b64
+
+# 日志与临时文件
+*.log
+tmp/
+*.tmp
+
+# Go
+vendor/

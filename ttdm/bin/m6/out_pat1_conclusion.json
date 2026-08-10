@@ -1,0 +1,102 @@
+{
+  "task": "pat1+pat1b: im-api message/send 签名必要性实测",
+  "conclusion": "X-Bogus 不是 im-api message/send 的门槛; 7193 是业务层 message_request_limit",
+  "evidence": [
+    {
+      "id": "A_nosign",
+      "desc": "外部 HTTP, 无任何签名, 带浏览器 cookie",
+      "url": "im-api.../message/send (裸 URL)",
+      "result": "HTTP 200, biz 7193",
+      "tips": "You can only send up to 1 message before this user accepts your message request."
+    },
+    {
+      "id": "B_snapshot",
+      "desc": "外部 HTTP, 快照 X-Dynosaur (query)",
+      "url": "...&X-Dynosaur=<snapshot>",
+      "result": "HTTP 200, biz 7193"
+    },
+    {
+      "id": "C_newbogus",
+      "desc": "外部 HTTP, Node 沙箱真 X-Bogus 64zmV7hvEFdCQjdc + 快照 X-Dynosaur",
+      "url": "...&X-Dynosaur=<snapshot>",
+      "result": "HTTP 200, biz 7193"
+    },
+    {
+      "id": "D_emptymeta_nosign",
+      "desc": "外部 HTTP, 空 meta body, 无签名",
+      "result": "HTTP 200, biz 7193"
+    },
+    {
+      "id": "E_emptymeta_signed",
+      "desc": "外部 HTTP, 空 meta body, X-Bogus=1 占位 + 快照三件套(X-Dynosaur/msToken/X-Gnarly)",
+      "result": "HTTP 200, biz 7193"
+    },
+    {
+      "id": "F_meta_nosign",
+      "desc": "外部 HTTP, 有 meta body, 无签名",
+      "result": "HTTP 200, biz 7193"
+    },
+    {
+      "id": "capture12_pagefetch_nosign",
+      "desc": "页面上下文 fetch (带页面 cookie), 无签名, 新 body(mkbody)",
+      "result": "HTTP 200, biz 7193"
+    },
+    {
+      "id": "page_real_request",
+      "desc": "send_body.txt 采样真实页面 message/send: X-Bogus=1 字面值 + X-Gnarly/X-Dynosaur 由拦截层附加",
+      "result": "HTTP 200 (服务端受理)"
+    },
+    {
+      "id": "G_hello_meta",
+      "desc": "新接收方(royyen主号6769...) 无签名, 有meta, 文本 Hello",
+      "result": "HTTP 200, biz 7195 (内容审核 Community Guidelines)"
+    },
+    {
+      "id": "H_hello_emptymeta",
+      "desc": "新接收方 无签名, 空meta, 文本 Hello",
+      "result": "HTTP 200, biz 7195"
+    },
+    {
+      "id": "I_signed_newconv",
+      "desc": "新接收方(royyen_3 7479...) 快照签名三件套(X-Bogus=1+X-Gnarly+X-Dynosaur+msToken), 文本 Hello",
+      "result": "HTTP 200, biz 7195"
+    },
+    {
+      "id": "J_nosign_newconv",
+      "desc": "同一新接收方(royyen_3) 无签名, 同 body",
+      "result": "HTTP 200, biz 7195 — 与 I 完全一致, 签名零影响"
+    },
+    {
+      "id": "frontierSign_live",
+      "desc": "页面实时 frontierSign 返回 {\"X-Bogus\":\"WMWr7VYcol8Lmz0C\"}, 仅 X-Bogus, 无 X-Gnarly/X-Dynosaur",
+      "result": "签名函数只产 X-Bogus"
+    }
+  ],
+  "key_facts": [
+    "页面真实请求 X-Bogus 就是字面值 '1', 服务端接受 → X-Bogus 不校验真实性",
+    "X-Gnarly/X-Dynosaur 为 webmssdk 拦截层动态附加, 与 frontierSign 无关",
+    "7193 = scene message_request_limit: 对方接受消息请求前只能发 1 条 (对应 ttdm tiktokapi.PermissionOne=1)",
+    "7195 = 内容审核拒绝 (Community Guidelines), 新接收方首条即触发",
+    "同一接收方 带/不带签名(含真X-Bogus/快照三件套) 结果逐字节一致 → 签名对 message/send 完全非必需",
+    "4 个测试会话均已于 8/2 发出过 1 条 → 额度耗尽, 之后任何发送都 7193",
+    "ttdm CheckImPermission 已实现 chat_request_start→1 条 / chat_stranger_check→3 条预筛, 与 7193 语义吻合"
+  ],
+  "impact_on_ttdm": [
+    "message/send 直连不需要本地 X-Bogus 签名链路 (Node 沙箱 frontierSign 可降级为可选兜底)",
+    "发送门槛是业务层判定: 7193 消息请求限制 + 7195 内容审核, 均与签名无关",
+    "必须靠 CheckImPermission 预筛 + 1 条额度管理 + 话术合规(避免7195)",
+    "新接收方首条发送(第1条)正面成功案例(status=0)受内容审核与额度双重限制, 未能直接观测; 但签名影响已排除"
+  ],
+  "artifacts": [
+    "out_compare_send.json (A/B/C 变体, 含完整响应体)",
+    "out_compare_send2.json (D/E/F 变体)",
+    "out_capture12.json (页面 fetch 无签名)",
+    "out_signlive.json (页面实时 frontierSign 采样)",
+    "out_nosign_first.json / out_nosign_first2.json / out_nosign_first3.json (新接收方 G/H)",
+    "out_signednew.json (新接收方 I/J 决定性对照)",
+    "send_body.txt (真实页面请求采样, X-Bogus=1 字面值)",
+    "sign_snapshot.json (快照签名三件套)",
+    "jsrebuild/gen_bogus.js + out_bogus.txt (Node 沙箱 X-Bogus 生成)"
+  ],
+  "captured_at": "2026-08-09T22:45:00+08:00"
+}

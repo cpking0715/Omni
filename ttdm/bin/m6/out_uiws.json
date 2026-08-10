@@ -1,0 +1,21 @@
+{
+  "chat_tail": [
+    "Your content is amazing! Check out our page too 🙌"
+  ],
+  "input_after": "rs-v6-1786291722499rs-v7-1786291805459rs-uiws-178629188144659/6000",
+  "ws_in": [],
+  "http": [],
+  "ws_out": [
+    "hi",
+    "hi"
+  ],
+  "msg": "rs-uiws-1786291881446",
+  "log": [
+    "hook: done",
+    "open: royyen",
+    "coord: {\"x\":565,\"y\":475}",
+    "inserted: rs-uiws-1786291881446",
+    "btn: {\"x\":754,\"y\":475}",
+    "clicked"
+  ]
+}
